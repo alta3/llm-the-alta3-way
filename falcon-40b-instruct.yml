@@ -1,0 +1,65 @@
+---
+- name: Install Falcon 40B instruct GGML
+  hosts: ll
+  vars:
+    ggllm_url: "https://github.com/cmp-nct/ggllm.cpp"
+    ggllm_branch: "master"
+    ggllm_dir: "{{ ansible_env.HOME }}/ggllm.cpp"
+    llama_cublas: 1 # enabled
+    falcon_filename: "falcon40b-instruct.ggmlv3.q8_0.bin"
+    falcon_url: "https://huggingface.co/TheBloke/falcon-40b-instruct-GGML/resolve/main/{{ falcon_filename }}"
+    falcon_tokenizer_url: "https://huggingface.co/tiiuae/falcon-40b-instruct/raw/main/tokenizer.json"
+
+  tasks:
+    - name: Verify variables
+      debug: 
+        msg:
+         - "ggllm_url: {{ ggllm_url }}"
+         - "ggllm_branch: {{ ggllm_branch }}"
+         - "ggllm_dir: {{ ggllm_dir }}"
+         - "llama_cublas: {{ llama_cublas }}"
+         - "falcon_filename: {{ falcon_filename }}"
+         - "falcon_url: {{ falcon_url }}"
+         - "falcon_tokenizer_url: {{ falcon_tokenizer_url }}"
+
+    - name: Ensure packages are installed
+      package:
+        name:
+         - build-essential
+         - nvidia-cuda-toolkit
+         - git
+         - git-lfs
+         - aria2 
+         - neovim 
+      become: True
+
+    - name: Clone ggllm.cpp
+      git:
+        repo: "{{ ggllm_url }}"
+        dest: "{{ ggllm_dir }}"
+        single_branch: True
+        version: "{{ ggllm_branch }}"
+
+    - name: Build ggllm.cpp
+      shell: 
+        cmd: "make falcon_main falcon_quantize falcon_perplexity"
+        chdir: "{{ ggllm_dir }}"
+        creates: "{{ ggllm_dir }}/falcon_main"
+      environment:
+        LLAMA_CUBLAS: "{{ llama_cublas }}"
+
+    - name: Fetch Falcon GGML Parameters
+      shell:
+        cmd: "aria2c '{{ falcon_url }}' -o models/{{ falcon_filename }} -x 16 -j 16 -s 16 -c"
+        chdir: "{{ ggllm_dir }}"
+        creates: "{{ ggllm_dir }}/models/{{ falcon_filename }}"
+
+    - name: Fetch Falcon GGML Tokenizer JSON
+      get_url:
+        url: "{{falcon_tokenizer_url }}"
+        dest: "{{ ggllm_dir }}/models/tokenizer.json"
+
+    - name: Deploy prompts
+      synchronize:
+        src: "prompts/instruct/"
+        dest: "{{ ggllm_dir }}/prompts/"

@@ -1,0 +1,26 @@
+Below is an instruction that describes a task, paired with an input that provides further context. 
+Write a response that appropriately completes the request. 
+
+### Instruction:
+
+Response output shall be formatted in Markdown.
+Develop an ansible playbook that satisfies the provided input requirements.
+
+Response should be written in three sections:
+ 1) High level overview of the expected ansible playbook tasks in plain english. Title: Overview
+ 2) Summary of expected playbook variables, example values, and description of thier intended use. Title: Variables
+ 3) The full ansible playbook. Title: Playbook
+
+Additional ansible playbook requirements:
+ - Never use the ansible shell module to accomplish tasks for which an ansible module exists
+
+### Input: 
+
+Install a C++ LLM project onto a Ubuntu Linux target machine including:
+ - installing dependencies
+ - git cloning the source repo
+ - compiling the application via make
+ - downloading supporting datasets and configuration files
+ - running a test command to verify compilation succedded
+
+### Response:
