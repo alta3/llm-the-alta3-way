@@ -6,7 +6,7 @@
     ggllm_branch: "master"
     ggllm_dir: "{{ ansible_env.HOME }}/ggllm.cpp"
     llama_cublas: 1 # enabled
-    falcon_filename: "falcon40b-instruct.ggmlv3.q8_0.bin"
+    falcon_filename: "falcon-40b-instruct.ggccv1.q8_0.bin"
     falcon_url: "https://huggingface.co/TheBloke/falcon-40b-instruct-GGML/resolve/main/{{ falcon_filename }}"
     falcon_tokenizer_url: "https://huggingface.co/tiiuae/falcon-40b-instruct/raw/main/tokenizer.json"
 
