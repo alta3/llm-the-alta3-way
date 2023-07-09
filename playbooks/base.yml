@@ -1,0 +1,6 @@
+---
+- name: Baseline LLM install
+  hosts: all
+  roles:
+  - name: base
+    role: base

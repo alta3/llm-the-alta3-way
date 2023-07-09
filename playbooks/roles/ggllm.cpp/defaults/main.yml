@@ -1,0 +1,6 @@
+---
+# roles/ggllm.cpp/defaults/main.yml
+
+ggllm_repo: https://github.com/cmp-nct/ggllm.cpp
+ggllm_branch: "master"
+llama_cublas: 1 # enabled

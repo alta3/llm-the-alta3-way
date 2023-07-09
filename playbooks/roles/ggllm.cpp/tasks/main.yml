@@ -1,0 +1,26 @@
+---
+# roles/ggllm.cpp/tasks/main.yml
+
+- name: Verify variables
+  debug: 
+    msg:
+     - "ggllm_dir: {{ ggllm_dir }}"       # role invocation
+     - "ggllm_repo: {{ ggllm_repo }}"     # roles/ggllm.cpp/defaults/main.yml
+     - "ggllm_branch: {{ ggllm_branch }}" # roles/ggllm.cpp/defaults/main.yml
+     - "llama_cublas: {{ llama_cublas }}" # roles/ggllm.cpp/defaults/main.yml
+
+- name: Clone ggllm.cpp
+  git:
+    repo: "{{ ggllm_repo }}"   
+    dest: "{{ ggllm_dir }}"     
+    single_branch: True
+    version: "{{ ggllm_branch }}" # roles/ggllm.cpp/defaults/main.yml
+
+- name: Build ggllm.cpp
+  shell: 
+    cmd: "make falcon_main falcon_quantize falcon_perplexity"
+    chdir: "{{ ggllm_dir }}" 
+    creates: "{{ ggllm_dir }}/falcon_main"
+  environment:
+    LLAMA_CUBLAS: "{{ llama_cublas }}"
+

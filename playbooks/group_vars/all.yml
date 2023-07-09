@@ -1,0 +1,38 @@
+---
+# group_vars/all.yml
+# Default variables for llm-the-alta3-way
+
+# Directories
+llm_dir: "{{ ansible_env.HOME }}/llm"
+llm_git_dir: "{{ llm_dir }}/git"
+llm_model_dir: "{{ llm_dir }}/model"
+llm_prompt_dir: "{{ llm_dir }}/prompt"
+llm_dataset_dir: "{{ llm_dir }}/dataset"
+
+# Soruce locations (from this repo)
+src_prompt_dir: "../prompt"
+
+# Reposititories
+pytorch_repo: https://github.com/pytorch/pytorch.git
+
+# Apt baseline
+default_apt_list:
+  # build 
+  - build-essential
+  - nvidia-cuda-toolkit
+  # fetch
+  - git
+  - git-lfs
+  - aria2
+  - wget
+  - curl
+  # utilities
+  - gpg
+  - htop
+  - neovim
+
+# pip installed cli tools versions
+pip_llm_version: main
+pip_llm: "git+https://github.com/simonw/llm@{{ pip_llm_version }}"
+pip_ttok_version: main
+pip_ttok: "git+https://github.com/simonw/ttok@{{ pip_ttok_version }}"
