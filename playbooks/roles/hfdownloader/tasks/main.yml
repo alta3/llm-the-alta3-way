@@ -1,0 +1,29 @@
+---
+# roles/hfdownloader/tasks/main.yml
+
+- name: Verify variables
+  debug: 
+    msg:
+     - "hfdownloader_dir: {{ hfdownloader_dir }}"   # role invocation
+     - "hfdownloader_repo: {{ hfdownloader_repo }}" # roles/hfdownloader/defaults/main.yml
+     - "golang_cc: {{ golang_cc }}"
+     - "install_dir: {{ install_dir }}"
+
+- name: Clone hfdownloader
+  git:
+    repo: "{{ hfdownloader_repo }}"   
+    dest: "{{ hfdownloader_dir }}"     
+    single_branch: True
+
+- name: Build hfdownloader
+  shell: 
+    cmd: "{{ golang_cc }} build ."
+    chdir: "{{ hfdownloader_dir }}" 
+    creates: "{{ hfdownloader_dir }}/hfdownloader"
+
+- name: Install hfdownloader
+  copy:
+    remote_src: True
+    src: "{{ hfdownloader_dir }}/hfdownloader"
+    dest: "{{ install_dir }}/hfdownloader"
+    mode: 0755

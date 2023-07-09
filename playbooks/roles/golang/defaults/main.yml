@@ -1,0 +1,7 @@
+golang_version: '1.20.5'
+golang_arch: 'amd64'
+golang_os: 'linux'
+golang_tar: 'go{{ golang_version }}.{{ golang_os }}-{{ golang_arch }}.tar.gz'
+golang_url: 'https://go.dev/dl/{{ golang_tar }}'
+golang_tmp: '/tmp/'
+golang_install_dir: '/usr/local/go'

@@ -1,4 +1,7 @@
 ---
+- name: Setup Default 
+  import_playbook: default.yml
+
 - name: Install Falcon 40B instruct GGML
   hosts: ll
   vars:
@@ -13,8 +16,6 @@
     ggllm_dir: "{{ llm_git_dir }}/ggllm.cpp"
 
   roles:
-    - name: Install base
-      role: base
     - name: Install ggllm.cpp
       role: ggllm.cpp
       vars: 

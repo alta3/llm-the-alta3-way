@@ -9,7 +9,7 @@
 - name: Install cli llm tools from pip
   pip:
     name: 
-      - "{{ pip_llm }}" # group_vars/all.yml
+      - "{{ pip_llm }}"  # group_vars/all.yml
       - "{{ pip_ttok }}" # group_vars/all.yml
 
 - name: Create llm directory structure
@@ -17,11 +17,17 @@
     path: "{{ item }}"
     state: directory
   loop:
-   - "{{ llm_dir }}"
-   - "{{ llm_git_dir }}"
-   - "{{ llm_model_dir }}"
-   - "{{ llm_prompt_dir }}"
-   - "{{ llm_dataset_dir }}"
+   - "{{ llm_dir }}"          # group_vars/all.yml
+   - "{{ llm_bin_dir }}"      # group_vars/all.yml
+   - "{{ llm_git_dir }}"      # group_vars/all.yml
+   - "{{ llm_model_dir }}"    # group_vars/all.yml
+   - "{{ llm_prompt_dir }}"   # group_vars/all.yml
+   - "{{ llm_dataset_dir }}"  # group_vars/all.yml
+
+- name: Deploy bashrc
+  copy:
+    src: "files/bashrc"
+    dest: "{{ ansible_env.HOME }}/.bashrc"
 
 - name: Deploy source files
   synchronize:

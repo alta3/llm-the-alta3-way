@@ -1,8 +1,8 @@
+# `alta3/llm-the-alta3-way`
 
 ```
-alta3/llm-the-alta3-way
-├── playbook    # install playbooks
-├── prompt      # prompt collections
+├── playbook     # playbooks
+├── prompt       # prompts
 ├── torch        # pyTorch
 └── training     # training data
     └── instruct # instruct style training data
@@ -13,11 +13,12 @@ alta3/llm-the-alta3-way
 ### Frameworks
 
 - [ ] [ggerganov/llama.cpp](https://github.com/ggerganov/llama.cpp)
-- [ ] [cmp-nct/ggllm.cpp](https://github.com/cmp-nct/ggllm.cpp)
+- [x] [cmp-nct/ggllm.cpp](https://github.com/cmp-nct/ggllm.cpp)
 - [ ] [turboderp/exllama](https://github.com/turboderp/exllama)
 
 ### Tools
 
+- [ ] [golang]()
 - [ ] [bodaay/HuggingFaceModelDownloader]()
 - [x] [simonw/llm](https://github.com/simonw/llm) 
 - [x] [simonw/ttok](https://github.com/simonw/ttok) 

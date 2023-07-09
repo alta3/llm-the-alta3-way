@@ -1,0 +1,4 @@
+---
+# roles/hfdownloader/defaults/main.yml
+
+hfdownloader_repo: "https://github.com/bodaay/HuggingFaceModelDownloader"

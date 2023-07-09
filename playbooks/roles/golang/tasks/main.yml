@@ -1,0 +1,52 @@
+---
+- name: Debug required vars
+  debug:
+    msg:
+      - "golang_version: {{ golang_version }}"
+      - "golang_arch: {{ golang_arch }}"
+      - "golang_os: {{ golang_tar }}"
+      - "golang_tar: {{ golang_tar }}"
+      - "golang_url: {{ golang_url }}"
+      - "golang_tmp: {{ golang_tmp }}"
+      - "golang_install_dir: {{ golang_install_dir }}"
+
+- name: Install unarchive dependencies 
+  apt:
+    name:
+      - gzip
+      - tar
+    state: present
+  become: True
+
+- name: Purge previous install
+  file: 
+    path: "{{ golang_install_dir }}"
+    state: absent
+  become: True
+
+- name: Create install dir
+  file: 
+    path: "{{ golang_install_dir }}"
+    state: directory
+  become: True
+
+- name: Fetch golang tarball
+  get_url: 
+    url: "{{ golang_url }}"
+    dest: "{{ golang_tmp }}/{{ golang_tar }}"
+
+- name: Install Go
+  unarchive:
+    src: '{{ golang_tmp }}/{{ golang_tar }}'
+    remote_src: true
+    extra_opts: '--strip-components=1'
+    dest: '{{ golang_install_dir }}'
+    owner: root
+    group: root
+    creates: '{{ golang_install_dir }}/bin'
+  become: true
+
+- name: Remove golang tarball
+  file: 
+    path: "{{ golang_tmp }}/{{ golang_tar }}"
+    state: absent
