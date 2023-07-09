@@ -1,18 +1,19 @@
 ---
-- name: Baseline LLM install
+- name: Default install
   hosts: all
   vars:
     golang_install_dir: '/usr/local/go'
-    golang_cc: '{{ golang_install_dir }}/bin/go'
-  roles:
 
+  roles:
   - name: Base Install
     role: base
+
   - name: Golang Install
     role: golang
-  - name: bodaay/HuggingFaceModelDownloader Install
+
+  - name: hfdownloader Install (requires golang)
     role: hfdownloader
     vars: 
-      hfdownloader_dir: "{{ llm_git_dir }}/hfdownloader"
+      hfdownloader_dir: "{{ llm_git_dir }}/hfdownloader"  # group_vars/all.yml
+      install_dir: "{{ llm_bin_dir }}"                    # group_vars/all.yml
       golang_cc: '{{ golang_install_dir }}/bin/go'
-      install_dir: "{{ llm_bin_dir }}" 
