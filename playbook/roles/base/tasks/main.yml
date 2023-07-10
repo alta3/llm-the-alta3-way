@@ -1,16 +1,21 @@
 ---
 # roles/base/tasks/main.yml
-
-- name: Ensure base apt packages are installed
-  package:
-    name: "{{ default_apt_list }}" # group_vars/all.yml
+#
+- name: Ensure base apt update/upgrade
+  apt:
+    update_cache: True
+    cache_valid_time: 3600
+    upgrade: safe
   become: True
 
-- name: Install cli llm tools from pip
+- name: Ensure base apt packages are installed
+  apt:
+    name: "{{ default_apt_list }}" # roles/base/defaults/main.yml
+  become: True
+
+- name: Ensure base pip packages are installed
   pip:
-    name: 
-      - "{{ pip_llm }}"  # group_vars/all.yml
-      - "{{ pip_ttok }}" # group_vars/all.yml
+    name: "{{ default_pip_list }}" # roles/base/defaults/main.yml
 
 - name: Create llm directory structure
   file: 
@@ -30,7 +35,11 @@
     dest: "{{ ansible_env.HOME }}/.bashrc"
 
 - name: Deploy source files
-  synchronize:
-    src: "{{ src_prompt_dir }}/"
+  copy:
+    src: "{{ item.src }}/"
+    dest: "{{ item.dest }}/"
+  loop:
+  - src: "{{ src_prompt_dir }}/"
     dest: "{{ llm_prompt_dir }}/"
-
+  - src: "{{ src_model_dir }}/"
+    dest: "{{ llm_model_dir }}/"

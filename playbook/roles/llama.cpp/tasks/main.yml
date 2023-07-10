@@ -1,0 +1,26 @@
+---
+# roles/llama.cpp/tasks/main.yml
+
+- name: Verify variables
+  debug: 
+    msg:
+     - "llama_dir: {{ llama_dir }}"       # role invocation
+     - "llama_repo: {{ llama_repo }}"     # roles/llama.cpp/defaults/main.yml
+     - "llama_branch: {{ llama_branch }}" # roles/llama.cpp/defaults/main.yml
+     - "llama_cublas: {{ llama_cublas }}" # roles/llama.cpp/defaults/main.yml
+
+- name: Clone llama.cpp
+  git:
+    repo: "{{ llama_repo }}"   
+    dest: "{{ llama_dir }}"     
+    single_branch: True
+    version: "{{ llama_branch }}"
+
+- name: Build llama.cpp
+  shell: 
+    cmd: "make"
+    chdir: "{{ llama_dir }}" 
+    creates: "{{ llama_dir }}/main"
+  environment:
+    LLAMA_CUBLAS: "{{ llama_cublas }}"
+

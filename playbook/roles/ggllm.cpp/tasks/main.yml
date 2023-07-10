@@ -14,7 +14,7 @@
     repo: "{{ ggllm_repo }}"   
     dest: "{{ ggllm_dir }}"     
     single_branch: True
-    version: "{{ ggllm_branch }}" # roles/ggllm.cpp/defaults/main.yml
+    version: "{{ ggllm_branch }}"
 
 - name: Build ggllm.cpp
   shell: 

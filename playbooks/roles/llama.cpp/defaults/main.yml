@@ -1,3 +1,0 @@
----
-# roles/llama.cpp/defaults/main.yml
-lama.cpp_repo: https://github.com/ggerganov/llama.cpp

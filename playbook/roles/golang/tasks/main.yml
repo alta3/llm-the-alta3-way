@@ -4,7 +4,7 @@
     msg:
       - "golang_version: {{ golang_version }}"
       - "golang_arch: {{ golang_arch }}"
-      - "golang_os: {{ golang_tar }}"
+      - "golang_os: {{ golang_os }}"
       - "golang_tar: {{ golang_tar }}"
       - "golang_url: {{ golang_url }}"
       - "golang_tmp: {{ golang_tmp }}"

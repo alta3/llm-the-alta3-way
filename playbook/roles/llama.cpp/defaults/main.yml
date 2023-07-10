@@ -1,0 +1,6 @@
+---
+# roles/llama.cpp/defaults/main.yml
+
+llama_repo: https://github.com/ggerganov/llama.cpp
+llama_branch: "master"
+llama_cublas: 1 # enabled

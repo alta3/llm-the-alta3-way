@@ -1,0 +1,26 @@
+---
+# roles/base/defaults/main.yml
+
+# Apt baseline
+default_apt_list:
+  # build 
+  - build-essential
+  - nvidia-cuda-toolkit
+  # fetch
+  - git
+  - git-lfs
+  - aria2
+  - wget
+  - curl
+  # utilities
+  - gpg
+  - htop
+  - neovim
+
+# pip installed cli tools versions
+pip_llm_version: main
+pip_ttok_version: main
+default_pip_list:
+ - "git+https://github.com/simonw/llm@{{ pip_llm_version }}"
+ - "git+https://github.com/simonw/ttok@{{ pip_ttok_version }}"
+ - "bpytop"

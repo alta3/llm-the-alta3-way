@@ -1,0 +1,47 @@
+---
+- name: Setup Default 
+  import_playbook: default.yml
+
+- name: Install Orca Mini v2 13B GGML for use with llama.cpp
+  hosts: all
+  vars:
+    orca_model_dir: "{{ llm_model_dir }}/orca_mini_v2_13b"
+    orca_aria2_list: "orca_mini_v2_13b.aria2.list"
+    llama_dir: "{{ llm_git_dir }}/llama.cpp"
+
+  roles:
+    - name: Install llama.cpp
+      role: llama.cpp
+      vars: 
+        llama_dir: "{{ llm_git_dir }}/llama.cpp"
+
+  tasks:
+    - name: Verify variables
+      debug: 
+        msg:
+         - "llama_dir: {{ llama_dir }}"
+         - "src_model_dir: {{ src_model_dir }}"
+         - "orca_model_dir: {{ orca_model_dir }}"
+         - "orca_aria2_list: {{ orca_aria2_list }}"
+
+    - name: Create Model dir
+      file:
+        path: "{{ orca_model_dir }}"
+        state: directory
+
+    - name: Verify deployed modle file list
+      file:
+        path: "{{ orca_model_dir }}/{{ orca_aria2_list }}"
+        state: file
+
+    - name: Fetch Model Parameters
+      shell:
+        cmd: "aria2c --input-file '{{ orca_aria2_list }}' -x 16 -j 16 -s 16 -c"
+        chdir: "{{ orca_model_dir }}"
+
+    - name: Example usage
+      debug:
+        msg: 
+          - "cd {{ llama_dir }}"
+          - "./main --threads 14 --model {{ orca_model_dir }}/<MODEL> --file {{ llm_prompt_dir }}/instruct/instruct-ansible.txt"
+        
