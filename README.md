@@ -1,9 +1,9 @@
 # `alta3/llm-the-alta3-way`
 
 ```
-├── playbook     # playbooks
-├── prompt       # prompts
-├── torch        # pyTorch
+├── playbook     # playbooks for deploying models and dependencies
+├── prompt       # prompts for testing/demonstration
+├── torch        # steps and resources for interacting with models from pytorch 
 └── training     # training data
     └── instruct # instruct style training data
 ```
@@ -14,6 +14,17 @@
 - Tested with Nvidia H100
 
 ## Roadmap
+
+### Models
+
+- [Falcon 40B Instruct](https://huggingface.co/TheBloke/falcon-40b-instruct-GGML) with ggllm.cpp: 
+   ```bash
+   ansible-playbook playbook/falcon-40b-instruct.yml
+   ```
+- [Orca Mini v2 13B](https://huggingface.co/TheBloke/orca_mini_v2_13b-GGML) with llama.cpp
+   ```bash
+   ansible-playbook playbook/orca_mini_v2_13b.yml
+   ```
 
 ### Frameworks
 
@@ -46,15 +57,4 @@
 - [golang 1.20.5](https://go.dev/)
    ```bash
    go help; go version; which go
-   ```
-
-### Models
-
-- [Falcon 40B Instruct](https://huggingface.co/TheBloke/falcon-40b-instruct-GGML) with ggllm.cpp: 
-   ```bash
-   ansible-playbook playbook/falcon-40b-instruct.yml
-   ```
-- [Orca Mini v2 13B](https://huggingface.co/TheBloke/orca_mini_v2_13b-GGML) with llama.cpp
-   ```bash
-   ansible-playbook playbook/orca_mini_v2_13b.yml
    ```
