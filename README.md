@@ -10,7 +10,7 @@
 
 ## Assumptions
 
-- Ubuntu 20.04 taret host (e.g. Lamba Labs)
+- Ubuntu 20.04 target host (e.g. Lambda Labs)
 - Tested with Nvidia H100
 
 ## Roadmap
