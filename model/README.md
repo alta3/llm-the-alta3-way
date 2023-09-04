@@ -4,7 +4,8 @@
 └─── model_name_30B
     ├── clean.sh -> ../clean.sh  // cleanup script, deletes .bin files
     ├── fetch.sh -> ../fetch.sh  // fetch model data (see Aria2 lists)
-    ├── README.md                // The original repo's model card
+    ├── unsplit.sh               // unsplit large models if required
+    ├── README.md                // the original repo's model card
     ├── TheBloke_README.md       // TheBloke quntization model card
     └── model.list               // List of files to fetch
 ```
