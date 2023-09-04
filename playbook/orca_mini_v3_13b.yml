@@ -46,4 +46,6 @@
           - "python3 -m pip install numpy"
           - "./convert-llama-ggmlv3-to-gguf.py --input {{ model_dir }}/orca_mini_v3_13b.ggmlv3.q8_0.bin --output {{ model_dir }}/orca_mini_v3_13b.gguf.q8_0.bin"
           - "./main -ngl <LAYERS> --threads 14 --model {{ model_dir }}/orca_mini_v3_13b.gguf.q8_0.bin --file {{ llm_prompt_dir }}/instruct/ansible.txt"
+          - "./main  -ngl 100 --threads 14 --model {{ model_dir }}/orca_mini_v3_13b.gguf.q4_K_S.bin --file <(cat ../../prompt/orca/summarize.txt <(grep student ../../prompt/data/k8s-lab.md)  ../../prompt/orca/response.txt) --grammar-file grammars/json.gbnf"
+
         
