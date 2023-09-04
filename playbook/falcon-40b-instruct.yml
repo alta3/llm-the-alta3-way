@@ -2,11 +2,11 @@
 - name: Setup base
   import_playbook: default.yml
 
-- name: Install Falcon 40B instruct GGML
+- name: Install Falcon 40B instruct
   hosts: all
   vars:
     model_dir: "{{ llm_model_dir }}/falcon-40b-instruct"
-    aria2_list: "model."
+    aria2_list: "model.list"
     llama_dir: "{{ llm_git_dir }}/llama.cpp"
 
   roles:
@@ -37,6 +37,6 @@
     - name: Example usage
       debug:
         msg: 
-          - "cd {{ ggllm_dir }}"
+          - "cd {{ llama_dir }}"
           - "./main --threads 14 --model {{ model_dir }}/<MODEL> --file {{ llm_prompt_dir }}/instruct/instruct-ansible.txt"
         
