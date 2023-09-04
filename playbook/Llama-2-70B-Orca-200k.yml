@@ -2,10 +2,10 @@
 - name: Setup Default 
   import_playbook: default.yml
 
-- name: Install Orca Mini v3 13B GGML for use with llama.cpp
+- name: Install Llama2 70B Orca 200k for use with llama.cpp
   hosts: all
   vars:
-    orca_model_dir: "{{ llm_model_dir }}/orca_mini_v3_13b"
+    orca_model_dir: "{{ llm_model_dir }}/orca_mini_v2_13b"
     orca_aria2_list: "model.list"
     llama_dir: "{{ llm_git_dir }}/llama.cpp"
 
@@ -44,6 +44,6 @@
         msg: 
           - "cd {{ llama_dir }}"
           - "python3 -m pip install numpy"
-          - "./convert-llama-ggmlv3-to-gguf.py --input {{ orca_model_dir }}/orca_mini_v3_13b.ggmlv3.q8_0.bin --output {{ orca_model_dir }}/orca_mini_v3_13b.gguf.q8_0.bin"
-          - "./main --threads 14 --model {{ orca_model_dir }}/orca_mini_v3_13b.gguf.q8_0.bin --file {{ llm_prompt_dir }}/instruct/ansible.txt"
+          - "./convert-llama-ggmlv3-to-gguf.py --input {{ orca_model_dir }}/orca_mini_v2_13b.ggmlv3.q8_0.bin --output {{ orca_model_dir }}/orca_mini_v2_13b.gguf.q8_0.bin"
+          - "./main --threads 14 --model {{ orca_model_dir }}/orca_mini_v2_13b.gguf.q8_0.bin --file {{ llm_prompt_dir }}/instruct/ansible.txt"
         
