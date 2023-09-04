@@ -38,5 +38,10 @@
       debug:
         msg: 
           - "cd {{ llama_dir }}"
-          - "./main --threads 14 --model {{ model_dir }}/<MODEL> --file {{ llm_prompt_dir }}/instruct/instruct-ansible.txt"
+          - "python3 -m venv venv"
+          - "source venv/bin/activate"
+          - "python3 -m pip install -r requirements.txt"
+          - "python3 -m pip install torch transformers"
+          - "./convert-falcon-hf-to-gguf.py ../../model/falcon-40b-instruct 1"
+          - "./main -ngl <LAYERS> --threads 14 --model {{ model_dir }}/<MODEL> --file {{ llm_prompt_dir }}/instruct/instruct-ansible.txt"
         

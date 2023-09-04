@@ -43,25 +43,27 @@ ansible-playbook playbook/<model>.yml
 
 ### Models
 
-- [Llama2 70B Orca 200k GGUF](https://huggingface.co/TheBloke/Llama-2-70B-Orca-200k-GGUF) with llama.cpp
+- [x] [Llama2 70B Orca 200k GGUF](https://huggingface.co/TheBloke/Llama-2-70B-Orca-200k-GGUF)
    ```bash
    ansible-playbook playbook/Llama-2-70B-Orca-200k.yml
    ```
 
-- [Orca Mini v3 13B GGML](https://huggingface.co/TheBloke/orca_mini_v3_13b-GGML) with llama.cpp
+- [x] [Orca Mini v3 13B GGML](https://huggingface.co/TheBloke/orca_mini_v3_13b-GGML)
    ```bash
    ansible-playbook playbook/orca_mini_v3_13b.yml
    ```
 
-- [Falcon 40B Instruct](https://huggingface.co/TheBloke/falcon-40b-instruct-GGML) with ggllm.cpp: 
+- [x] [Falcon 40B Instruct](https://huggingface.co/tiiuae/falcon-40b-instruct): 
    ```bash
    ansible-playbook playbook/falcon-40b-instruct.yml
    ```
 
+- [ ] [CodeLlama](https://github.com/facebookresearch/codellama)
+
+
 ### Frameworks
 
 - [ggerganov/llama.cpp](https://github.com/ggerganov/llama.cpp)
-- [cmp-nct/ggllm.cpp](https://github.com/cmp-nct/ggllm.cpp)
 - [ ] [turboderp/exllama](https://github.com/turboderp/exllama)
 
 ### Tools
@@ -93,3 +95,5 @@ ansible-playbook playbook/<model>.yml
 
 
 ### Deprecated
+
+- [cmp-nct/ggllm.cpp](https://github.com/cmp-nct/ggllm.cpp) - [Falcon support added to llama.cpp](https://github.com/ggerganov/llama.cpp/issues/1602)

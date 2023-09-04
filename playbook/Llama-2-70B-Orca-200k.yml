@@ -20,7 +20,6 @@
       debug: 
         msg:
          - "llama_dir: {{ llama_dir }}"
-         - "src_model_dir: {{ src_model_dir }}"
          - "model_dir: {{ model_dir }}"
          - "aria2_list: {{ aria2_list }}"
 
@@ -42,6 +41,7 @@
     - name: Example usage
       debug:
         msg: 
+          - "cd {{ model_dir }} && ./unsplit"
           - "cd {{ llama_dir }}"
-          - "./main --threads 14 --model {{ model_dir }}/<model>.gguf --file {{ llm_prompt_dir }}/instruct/ansible.txt"
+          - "./main -ngl <LAYERS> --threads 14 --model {{ model_dir }}/<model>.gguf --file {{ llm_prompt_dir }}/instruct/ansible.txt"
         
