@@ -38,9 +38,14 @@ ansible-playbook playbook/<model>.yml
 
 ### Models
 
-- [Orca Mini v2 13B](https://huggingface.co/TheBloke/orca_mini_v2_13b-GGML) with llama.cpp
+- [Llama2 70B Orca 200k GGUF](https://huggingface.co/TheBloke/Llama-2-70B-Orca-200k-GGUF) with llama.cpp
    ```bash
-   ansible-playbook playbook/orca_mini_v2_13b.yml
+   ansible-playbook playbook/Llama-2-70B-Orca-200k.yml
+   ```
+
+- [Orca Mini v3 13B GGML](https://huggingface.co/TheBloke/orca_mini_v3_13b-GGML) with llama.cpp
+   ```bash
+   ansible-playbook playbook/orca_mini_v3_13b.yml
    ```
 
 - [Falcon 40B Instruct](https://huggingface.co/TheBloke/falcon-40b-instruct-GGML) with ggllm.cpp: 
