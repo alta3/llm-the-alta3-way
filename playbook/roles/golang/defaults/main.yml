@@ -1,4 +1,4 @@
-golang_version: '1.20.5'
+golang_version: '1.21.0'
 golang_arch: 'amd64'
 golang_os: 'linux'
 golang_tar: 'go{{ golang_version }}.{{ golang_os }}-{{ golang_arch }}.tar.gz'
