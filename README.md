@@ -29,11 +29,9 @@ Baseline pre-playbook installs and updates
   git clone https://github.com/alta3/llm-the-alta3-way $HOME/llm/git/llm-the-alta3-way
   cd $HOME/llm/git/llm-the-alta3-way
 }
-. $HOME/.bashrc
-. $HOME/.profile 
 ```
 
-
+Reboot may be useful if newer GPU drivers were installed.
 
 Run (see models section for specific playbooks)
 

@@ -9,7 +9,9 @@ llm_git_dir: "{{ llm_dir }}/git"
 llm_model_dir: "{{ llm_dir }}/model"
 llm_prompt_dir: "{{ llm_dir }}/prompt"
 llm_dataset_dir: "{{ llm_dir }}/dataset"
+llm_dataset_dir: "{{ llm_dir }}/torch"
 
 # Soruce locations (from this repo)
 src_prompt_dir: "../prompt"
 src_model_dir: "../model"
+src_model_dir: "../torch"

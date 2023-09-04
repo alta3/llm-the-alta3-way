@@ -44,3 +44,5 @@
     dest: "{{ llm_prompt_dir }}/"
   - src: "{{ src_model_dir }}/"
     dest: "{{ llm_model_dir }}/"
+  - src: "{{ src_model_dir }}/"
+    dest: "{{ llm_model_dir }}/"
