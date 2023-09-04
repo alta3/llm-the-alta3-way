@@ -5,8 +5,8 @@
 - name: Install Llama2 70B Orca 200k for use with llama.cpp
   hosts: all
   vars:
-    orca_model_dir: "{{ llm_model_dir }}/orca_mini_v2_13b"
-    orca_aria2_list: "model.list"
+    model_dir: "{{ llm_model_dir }}/Llama-2-70B-Orca-200k"
+    aria2_list: "model.list"
     llama_dir: "{{ llm_git_dir }}/llama.cpp"
 
   roles:
@@ -21,29 +21,27 @@
         msg:
          - "llama_dir: {{ llama_dir }}"
          - "src_model_dir: {{ src_model_dir }}"
-         - "orca_model_dir: {{ orca_model_dir }}"
-         - "orca_aria2_list: {{ orca_aria2_list }}"
+         - "model_dir: {{ model_dir }}"
+         - "aria2_list: {{ orca_aria2_list }}"
 
     - name: Create Model dir
       file:
-        path: "{{ orca_model_dir }}"
+        path: "{{ model_dir }}"
         state: directory
 
     - name: Verify deployed modle file list
       file:
-        path: "{{ orca_model_dir }}/{{ orca_aria2_list }}"
+        path: "{{ model_dir }}/{{ aria2_list }}"
         state: file
 
     - name: Fetch Model Parameters
       shell:
-        cmd: "aria2c --input-file '{{ orca_aria2_list }}' -x 16 -j 16 -s 16 -c"
-        chdir: "{{ orca_model_dir }}"
+        cmd: "aria2c --input-file '{{ aria2_list }}' -x 16 -j 16 -s 16 -c"
+        chdir: "{{ model_dir }}"
 
     - name: Example usage
       debug:
         msg: 
           - "cd {{ llama_dir }}"
-          - "python3 -m pip install numpy"
-          - "./convert-llama-ggmlv3-to-gguf.py --input {{ orca_model_dir }}/orca_mini_v2_13b.ggmlv3.q8_0.bin --output {{ orca_model_dir }}/orca_mini_v2_13b.gguf.q8_0.bin"
-          - "./main --threads 14 --model {{ orca_model_dir }}/orca_mini_v2_13b.gguf.q8_0.bin --file {{ llm_prompt_dir }}/instruct/ansible.txt"
+          - "./main --threads 14 --model {{ model_dir }}/<model>.gguf --file {{ llm_prompt_dir }}/instruct/ansible.txt"
         
