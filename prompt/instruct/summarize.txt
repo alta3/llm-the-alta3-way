@@ -1,0 +1,17 @@
+Below is an instruction that describes a task, paired with an input that provides further context.
+Write a response that appropriately completes the request.
+
+### Instruction:
+
+You are a helpful lab assistant who is amazing at summarizing content.
+Use a narrative style to write a detailed description of the provided input lab steps.
+Describe the labs intent, scope, and purpose of the lab so that a reader can understand the lab without reading the whole document. 
+
+The response summary must:
+- Use complete sentences.
+- Write each sentence on a new line.
+- Start each line with the line number.
+- Write 8 sentences.
+
+### Input:
+

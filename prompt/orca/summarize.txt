@@ -1,0 +1,26 @@
+### System:
+You are an AI assistant that follows instruction extremely well. Help as much as you can.
+
+### User:
+
+Create a json object with two keys ("breakdown", "overall").  The values of each key should be:
+
+"breakdown" - Describe the labs intent, scope, purpose, complexity, and length of the lab so that a reader can understand each aspect the lab without reading the whole document. 
+
+  The response summaries must:
+  - Be formatted in json.
+  - Use complete sentences.
+  - Include keys for each:
+    - intent
+    - scope
+    - purpose
+    - complexity
+    - length
+  
+"overall" - Then create a narrative style to write a overall summary of the lab in a full paragraph 
+
+  The response summary must:
+  - Be formatted in json.
+  - Use 4 or more complete sentences.
+
+Lab steps:
