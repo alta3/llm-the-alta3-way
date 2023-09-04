@@ -17,13 +17,13 @@
 
 - name: Build hfdownloader
   shell: 
-    cmd: "{{ golang_cc }} build ."
+    cmd: "{{ golang_cc }} build -o output/hfdownloader main.go"
     chdir: "{{ hfdownloader_dir }}" 
-    creates: "{{ hfdownloader_dir }}/hfdownloader"
+    creates: "{{ hfdownloader_dir }}/output/hfdownloader"
 
 - name: Install hfdownloader
   copy:
     remote_src: True
-    src: "{{ hfdownloader_dir }}/hfdownloader"
+    src: "{{ hfdownloader_dir }}/output/hfdownloader"
     dest: "{{ install_dir }}/hfdownloader"
     mode: 0755
