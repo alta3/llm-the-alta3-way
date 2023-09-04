@@ -28,6 +28,7 @@
    - "{{ llm_model_dir }}"    # group_vars/all.yml
    - "{{ llm_prompt_dir }}"   # group_vars/all.yml
    - "{{ llm_dataset_dir }}"  # group_vars/all.yml
+   - "{{ llm_torch_dir }}"    # group_vars/all.yml
 
 - name: Deploy bashrc
   copy:
@@ -44,5 +45,5 @@
     dest: "{{ llm_prompt_dir }}/"
   - src: "{{ src_model_dir }}/"
     dest: "{{ llm_model_dir }}/"
-  - src: "{{ src_model_dir }}/"
-    dest: "{{ llm_model_dir }}/"
+  - src: "{{ src_torch_dir }}/"
+    dest: "{{ llm_torch_dir }}/"

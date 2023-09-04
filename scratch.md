@@ -8,8 +8,3 @@
   - ctransformers
   - transformers
 - Fine tuning on a dataset
-
-
-python3 -m venv torch/venv/
-source torch/venv/bin/activate
-python3 -m pip install -r torch/requirements.txt
