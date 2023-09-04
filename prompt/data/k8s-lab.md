@@ -1,7 +1,5 @@
 # **kubectl get**
 
-<video class="slide" controls="" controlslist="nodownload" data-autoplay="" poster="https://labs.alta3.com/courses/kubernetes/slides/vid/poster.PNG"><source type="video/mp4" src="https://labs.alta3.com/courses/kubernetes/slides/05-Listing-Resources-with-kubectl-get.mp4" data-lazy-loaded=""></video>
-
 ### CKAD Objectives
 - *Understand debugging in Kubernetes*
 
