@@ -1,0 +1,40 @@
+https://huggingface.co/tiiuae/falcon-40b-instruct/resolve/main/.gitattributes
+  out=.gitattributes
+https://huggingface.co/tiiuae/falcon-40b-instruct/resolve/main/README.md
+  out=README.md
+https://huggingface.co/tiiuae/falcon-40b-instruct/resolve/main/config.json
+  out=config.json
+https://huggingface.co/tiiuae/falcon-40b-instruct/resolve/main/configuration_RW.py
+  out=configuration_RW.py
+https://huggingface.co/tiiuae/falcon-40b-instruct/resolve/main/generation_config.json
+  out=generation_config.json
+https://huggingface.co/tiiuae/falcon-40b-instruct/resolve/main/handler.py
+  out=handler.py
+https://huggingface.co/tiiuae/falcon-40b-instruct/resolve/main/modelling_RW.py
+  out=modelling_RW.py
+https://huggingface.co/tiiuae/falcon-40b-instruct/resolve/main/pytorch_model-00001-of-00009.bin
+  out=pytorch_model-00001-of-00009.bin
+https://huggingface.co/tiiuae/falcon-40b-instruct/resolve/main/pytorch_model-00002-of-00009.bin
+  out=pytorch_model-00002-of-00009.bin
+https://huggingface.co/tiiuae/falcon-40b-instruct/resolve/main/pytorch_model-00003-of-00009.bin
+  out=pytorch_model-00003-of-00009.bin
+https://huggingface.co/tiiuae/falcon-40b-instruct/resolve/main/pytorch_model-00004-of-00009.bin
+  out=pytorch_model-00004-of-00009.bin
+https://huggingface.co/tiiuae/falcon-40b-instruct/resolve/main/pytorch_model-00005-of-00009.bin
+  out=pytorch_model-00005-of-00009.bin
+https://huggingface.co/tiiuae/falcon-40b-instruct/resolve/main/pytorch_model-00006-of-00009.bin
+  out=pytorch_model-00006-of-00009.bin
+https://huggingface.co/tiiuae/falcon-40b-instruct/resolve/main/pytorch_model-00007-of-00009.bin
+  out=pytorch_model-00007-of-00009.bin
+https://huggingface.co/tiiuae/falcon-40b-instruct/resolve/main/pytorch_model-00008-of-00009.bin
+  out=pytorch_model-00008-of-00009.bin
+https://huggingface.co/tiiuae/falcon-40b-instruct/resolve/main/pytorch_model-00009-of-00009.bin
+  out=pytorch_model-00009-of-00009.bin
+https://huggingface.co/tiiuae/falcon-40b-instruct/resolve/main/pytorch_model.bin.index.json
+  out=pytorch_model.bin.index.json
+https://huggingface.co/tiiuae/falcon-40b-instruct/resolve/main/special_tokens_map.json
+  out=special_tokens_map.json
+https://huggingface.co/tiiuae/falcon-40b-instruct/resolve/main/tokenizer.json
+  out=tokenizer.json
+https://huggingface.co/tiiuae/falcon-40b-instruct/resolve/main/tokenizer_config.json
+  out=tokenizer_config.json
