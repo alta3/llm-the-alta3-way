@@ -19,9 +19,8 @@ Baseline pre-playbook installs and updates
 
 ```bash
 {
-  export DEBIAN_FRONTEND=noninteractive
-  export NEEDRESTART_MODE=a
   sudo apt update 
+  DEBIAN_FRONTEND=noninteractive NEEDRESTART_MODE=a \
   sudo apt install -y python3-pip python3-venv git
   python3 -m pip install --upgrade --user pip
   python3 -m pip install --user ansible
@@ -31,12 +30,11 @@ Baseline pre-playbook installs and updates
 }
 ```
 
-Reboot may be useful if newer GPU drivers were installed.
-
 Run (see models section for specific playbooks)
 
 ```bash
 ansible-playbook playbook/<model>.yml
+# Reboot may be useful if newer GPU drivers were installed.
 ```
 
 ### Models

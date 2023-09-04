@@ -14,4 +14,4 @@ llm_dataset_dir: "{{ llm_dir }}/torch"
 # Soruce locations (from this repo)
 src_prompt_dir: "../prompt"
 src_model_dir: "../model"
-src_model_dir: "../torch"
+src_torch_dir: "../torch"
