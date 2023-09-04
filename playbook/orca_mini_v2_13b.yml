@@ -43,5 +43,7 @@
       debug:
         msg: 
           - "cd {{ llama_dir }}"
-          - "./main --threads 14 --model {{ orca_model_dir }}/<MODEL> --file {{ llm_prompt_dir }}/instruct/instruct-ansible.txt"
+          - "python3 -m pip install numpy"
+          - "./convert-llama-ggmlv3-to-gguf.py --input {{ orca_model_dir }}/orca_mini_v2_13b.ggmlv3.q8_0.bin --output {{ orca_model_dir }}/orca_mini_v2_13b.gguf.q8_0.bin"
+          - "./main --threads 14 --model {{ orca_model_dir }}/orca_mini_v2_13b.gguf.q8_0.bin --file {{ llm_prompt_dir }}/instruct/ansible.txt"
         
