@@ -5,44 +5,38 @@
 - name: Install Falcon 40B instruct GGML
   hosts: all
   vars:
-    falcon_model_dir: "{{ llm_model_dir }}/falcon-40b-instruct"
-    falcon_aria2_list: "falcon-40b-instruct.aria2.list"
-    falcon_tokenizer_url: "https://huggingface.co/tiiuae/falcon-40b-instruct/raw/main/tokenizer.json"
-    ggllm_dir: "{{ llm_git_dir }}/ggllm.cpp"
+    model_dir: "{{ llm_model_dir }}/falcon-40b-instruct"
+    aria2_list: "model."
+    llama_dir: "{{ llm_git_dir }}/llama.cpp"
 
   roles:
-    - name: Install ggllm.cpp
-      role: ggllm.cpp
+    - name: Install llama.cpp
+      role: llama.cpp
       vars: 
-        ggllm_dir: "{{ llm_git_dir }}/ggllm.cpp"
+        llama_dir: "{{ llm_git_dir }}/llama.cpp"
 
   tasks:
     - name: Verify variables
       debug: 
         msg:
-         - "ggllm_dir: {{ ggllm_dir }}"
-         - "falcon_model_dir: {{ falcon_model_dir }}"
-         - "falcon_aria2_list: {{ falcon_aria2_list }}"
-         - "falcon_tokenizer_url: {{ falcon_tokenizer_url }}" 
+         - "llama_dir: {{ llama_dir }}"
+         - "src_model_dir: {{ src_model_dir }}"
+         - "model_dir: {{ model_dir }}"
+         - "aria2_list: {{ aria2_list }}"
 
     - name: Create Falcon model dir
       file:
-        path: "{{ falcon_model_dir }}"
+        path: "{{ model_dir }}"
         state: directory
-
-    - name: Fetch Falcon Tokenizer JSON
-      get_url:
-        url: "{{ falcon_tokenizer_url }}"
-        dest: "{{ falcon_model_dir }}/tokenizer.json"
 
     - name: Fetch Model Parameters
       shell:
-        cmd: "aria2c --input-file '{{ falcon_aria2_list }}' -x 16 -j 16 -s 16 -c"
-        chdir: "{{ falcon_model_dir }}"
+        cmd: "aria2c --input-file '{{ aria2_list }}' -x 16 -j 16 -s 16 -c"
+        chdir: "{{ model_dir }}"
 
     - name: Example usage
       debug:
         msg: 
           - "cd {{ ggllm_dir }}"
-          - "./falcon_main --threads 14 --model {{ falcon_model_dir }}/<MODEL> --file {{ llm_prompt_dir }}/instruct/instruct-ansible.txt"
+          - "./main --threads 14 --model {{ model_dir }}/<MODEL> --file {{ llm_prompt_dir }}/instruct/instruct-ansible.txt"
         

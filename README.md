@@ -20,6 +20,7 @@ Baseline pre-playbook installs and updates
 ```bash
 {
   export DEBIAN_FRONTEND=noninteractive
+  export NEEDRESTART_MODE=a
   sudo apt update 
   sudo apt install -y python3-pip python3-venv git
   python3 -m pip install --upgrade --user pip
@@ -28,7 +29,11 @@ Baseline pre-playbook installs and updates
   git clone https://github.com/alta3/llm-the-alta3-way $HOME/llm/git/llm-the-alta3-way
   cd $HOME/llm/git/llm-the-alta3-way
 }
+. $HOME/.bashrc
+. $HOME/.profile 
 ```
+
+
 
 Run (see models section for specific playbooks)
 
@@ -85,3 +90,6 @@ ansible-playbook playbook/<model>.yml
    ```bash
    go help; go version; which go
    ```
+
+
+### Deprecated
