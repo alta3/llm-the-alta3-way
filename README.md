@@ -11,19 +11,41 @@
 ## Assumptions
 
 - Ubuntu 20.04 target host (e.g. Lambda Labs)
-- Tested with Nvidia H100
+- Tested with Nvidia H100, A100
 
-## Roadmap
+## Quickstart
+
+Baseline pre-playbook installs and updates
+
+```bash
+{
+  export DEBIAN_FRONTEND=noninteractive
+  sudo apt update 
+  sudo apt install -y python3-pip python3-venv git
+  python3 -m pip install --upgrade --user pip
+  python3 -m pip install --user ansible
+  mkdir -p $HOME/llm/git/
+  git clone https://github.com/alta3/llm-the-alta3-way $HOME/llm/git/llm-the-alta3-way
+  cd $HOME/llm/git/llm-the-alta3-way
+}
+```
+
+Run (see models section for specific playbooks)
+
+```bash
+ansible-playbook playbook/<model>.yml
+```
 
 ### Models
+
+- [Orca Mini v2 13B](https://huggingface.co/TheBloke/orca_mini_v2_13b-GGML) with llama.cpp
+   ```bash
+   ansible-playbook playbook/orca_mini_v2_13b.yml
+   ```
 
 - [Falcon 40B Instruct](https://huggingface.co/TheBloke/falcon-40b-instruct-GGML) with ggllm.cpp: 
    ```bash
    ansible-playbook playbook/falcon-40b-instruct.yml
-   ```
-- [Orca Mini v2 13B](https://huggingface.co/TheBloke/orca_mini_v2_13b-GGML) with llama.cpp
-   ```bash
-   ansible-playbook playbook/orca_mini_v2_13b.yml
    ```
 
 ### Frameworks
