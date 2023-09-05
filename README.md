@@ -29,6 +29,13 @@ Baseline pre-playbook installs and updates
 }
 ```
 
+Optional:
+
+```bash
+sudo apt install -y cuda-drivers
+sudo reboot
+```
+
 Run (see models section for specific playbooks)
 
 ```bash
