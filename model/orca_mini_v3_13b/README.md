@@ -10,7 +10,7 @@
 - [psmathur_README.md](./psmathur_README.md)
 - [TheBloke_README.md](./TheBloke_README.md)
 
-## Infrence example
+## Inference example
 
 ```bash
 cd llm/git/llama.cpp
