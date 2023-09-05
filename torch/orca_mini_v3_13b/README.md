@@ -14,6 +14,6 @@ python3 orca_v02.py ../../model/orca_mini_v3_13b/orca_mini_v3_13b.ggmlv3.q2_K.bi
 
 ### v03 streaming gpu example
 ```
-python3 orca_v02.py ../../model/orca_mini_v3_13b/orca_mini_v3_13b.ggmlv3.q2_K.bin 50
+python3 orca_v03.py ../../model/orca_mini_v3_13b/orca_mini_v3_13b.ggmlv3.q2_K.bin 50
 ```
 
