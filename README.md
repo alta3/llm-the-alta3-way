@@ -1,16 +1,18 @@
 # `alta3/llm-the-alta3-way`
 
 ```
-├── playbook     # playbooks for deploying models and dependencies
-├── prompt       # prompts for testing/demonstration
-├── torch        # steps and resources for interacting with models from pytorch 
-└── training     # training data
-    └── instruct # instruct style training data
+├── docs       # troubleshooting and other misc documentation
+├── model      # models with supporting fetch/clean/unsplit scripts
+├── playbook   # playbooks for deploying models and dependencies
+├── prompt     # prompts for testing/demonstration
+├── providers  # cloud gpu provider details and fix-up scripts
+├── torch      # steps and resources for interacting with models from python
+└── training   # training data
 ```
 
 ## Assumptions
 
-- Ubuntu 20.04 target host (e.g. Lambda Labs)
+- Ubuntu 20.04 or 22.04 target host
 - Tested with Nvidia H100, A100
 
 ## Quickstart
