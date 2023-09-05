@@ -5,6 +5,8 @@
 default_apt_list:
   # build 
   - build-essential
+  - cuda-drivers
+  - nvidia-cuda-dev
   - nvidia-cuda-toolkit
   # fetch
   - git
