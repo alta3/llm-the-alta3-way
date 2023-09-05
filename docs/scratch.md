@@ -1,10 +1,16 @@
-### Tasks 
+### Remaining Tasks 
 - [x] Locking down 5x A100s for the week
   - Datacrunch.io -> $10.57/hr
 - [x] alta3-ansible: llm in bchd have an openai api key - done
 - [x] 3x local LLM models and supporting playbooks - plus quantizations
-  - [ ] improve example running 
+  - improve example running 
+    - [x] orca 13b
+    - [ ] llama2 70b
+    - [ ] falcon 40b
 - python acces to transformers 
-  - ctransformers
-  - transformers
+  - [x] ctransformers
+  - [x] transformers
+- Do a quantization of falcon 40b
 - Fine tuning on a dataset
+- `llm` cli interface
+- webbased interface
