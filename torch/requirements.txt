@@ -2,3 +2,5 @@ torch
 numpy
 transformers
 ctransformers
+einops
+accelerate

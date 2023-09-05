@@ -6,6 +6,8 @@ Observed error:
 CUDA error 222 at /home/runner/work/ctransformers/ctransformers/models/ggml/ggml-cuda.cu:6045: the provided PTX was compiled with an unsupported toolchain.
 ```
 
+Fix:
+
 ```bash
 {
   sudo apt --purge remove -y "*cublas*" "cuda*" "*nvidia*"
@@ -16,5 +18,7 @@ CUDA error 222 at /home/runner/work/ctransformers/ctransformers/models/ggml/ggml
   sudo -E apt-get install -y nvidia-cuda-toolkit
 }
 ```
+
+Or try `cuda-toolkit-12-2` instead
 
 
