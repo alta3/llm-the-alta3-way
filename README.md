@@ -21,7 +21,7 @@ Baseline pre-playbook installs and updates
 {
   sudo apt update 
   DEBIAN_FRONTEND=noninteractive NEEDRESTART_MODE=a \
-  sudo apt-get install -y python3-pip python3-venv git
+  sudo -E apt-get install -y python3-pip python3-venv git
   python3 -m pip install --upgrade --user pip
   python3 -m pip install --user ansible
   git clone https://github.com/alta3/llm-the-alta3-way
@@ -39,8 +39,8 @@ sudo reboot
 Run (see models section for specific playbooks)
 
 ```bash
+# may need to source .profile or .bashrc to add ~/.local/bin/ to $PATH
 ansible-playbook playbook/<model>.yml
-# Reboot may be useful if newer GPU drivers were installed.
 ```
 
 ### Models
@@ -65,7 +65,8 @@ ansible-playbook playbook/<model>.yml
 
 ### Frameworks
 
-- [ggerganov/llama.cpp](https://github.com/ggerganov/llama.cpp)
+- [x] [ggerganov/llama.cpp](https://github.com/ggerganov/llama.cpp)
+- [x] [marella/ctransformers](https://github.com/marella/ctransformers)
 - [ ] [turboderp/exllama](https://github.com/turboderp/exllama)
 
 ### Tools

@@ -7,7 +7,7 @@ sudo apt clean
 sudo apt autoremove -y
 
 DEBIAN_FRONTEND=noninteractive NEEDRESTART_MODE=a \
-sudo apt-get install -y nvidia-cuda-toolkit
+sudo -E apt-get install -y nvidia-cuda-toolkit
 ```
 
 
