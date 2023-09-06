@@ -1,5 +1,3 @@
-Sure, here is a detailed comparison between the GGML models q2_k, q3_k_l, q3_k_m, and q3_k_s:
-
 | Model | Quantization Method | Bitwidth | Perplexity (7B) | Perplexity (13B) |
 |---|---|---|---|---|
 | q2_k | Integer quantization | 2 bits | 6.7764 | 5.8545 |
