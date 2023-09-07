@@ -7,7 +7,6 @@
 ├── prompt     # prompts for testing/demonstration
 ├── providers  # cloud gpu provider details and fix-up scripts
 ├── torch      # steps and resources for interacting with models from python
-└── training   # training data
 ```
 
 ## Assumptions
@@ -49,17 +48,17 @@ ansible-playbook playbook/<model>.yml
 
 - [x] [Llama2 70B Orca 200k GGUF](https://huggingface.co/TheBloke/Llama-2-70B-Orca-200k-GGUF)
    ```bash
-   ansible-playbook playbook/Llama-2-70B-Orca-200k.yml
+   ansible-playbook model/Llama-2-70B-Orca-200k/install.yml
    ```
 
 - [x] [Orca Mini v3 13B GGML](https://huggingface.co/TheBloke/orca_mini_v3_13b-GGML)
    ```bash
-   ansible-playbook playbook/orca_mini_v3_13b.yml
+   ansible-playbook model/orca_mini_v3_13b/install.yml
    ```
 
 - [x] [Falcon 40B Instruct](https://huggingface.co/tiiuae/falcon-40b-instruct): 
    ```bash
-   ansible-playbook playbook/falcon-40b-instruct.yml
+   ansible-playbook model/falcon-40b-instruct/install.yml
    ```
 
 - [ ] [CodeLlama](https://github.com/facebookresearch/codellama)
