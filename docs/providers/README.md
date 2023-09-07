@@ -2,9 +2,9 @@
 
 Specific setups and scripts for navigating the cloud gpu landscape
 
+### [DataCrunch.io](./datacrunch/README.md)
 
-### [DataCrunch.io](https://datacrunch.io)
-
+- [Home Page](https://datacrunch.io)
 - Ubuntu 22.04 image
 - GPUs:
   - A100 SXM4 80GB

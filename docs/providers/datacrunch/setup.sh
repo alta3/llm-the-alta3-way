@@ -1,13 +1,3 @@
-# DataCrunch.io
-
-
-### Setup ssh access
-
-- Disable root access 
-- Setup ubuntu user with same authorized keys
-- Make sudeoers passwordless
-
-```bash
 {
   sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin no/g' /etc/ssh/sshd_config
   sed -i 's/%sudo\sALL=(ALL:ALL) ALL/%sudo   ALL=(ALL) NOPASSWD:ALL/g' /etc/sudoers
@@ -18,4 +8,3 @@
   chown -R ubuntu:ubuntu /home/ubuntu/.ssh 
   systemctl restart ssh
 }
-```
