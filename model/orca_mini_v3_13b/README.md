@@ -10,6 +10,12 @@
 - [psmathur_README.md](./psmathur_README.md)
 - [TheBloke_README.md](./TheBloke_README.md)
 
+## Quickstart
+
+```bash
+./run.sh
+```
+
 ## Inference example
 
 Install `numpy`, required for conversion script:
