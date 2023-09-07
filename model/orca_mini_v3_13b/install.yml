@@ -1,6 +1,6 @@
 ---
-- name: Setup Default 
-  import_playbook: default.yml
+- name: Setup base playbook (default)
+  import_playbook: ../../ansible/default.yml
 
 - name: Install Orca mini v3 13B GGML for use with llama.cpp
   hosts: all
@@ -11,7 +11,7 @@
 
   roles:
     - name: Install llama.cpp
-      role: llama.cpp
+      role: ../../ansible/roles/llama.cpp
       vars: 
         llama_dir: "{{ llm_git_dir }}/llama.cpp"
 
