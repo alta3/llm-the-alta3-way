@@ -1,12 +1,11 @@
 # `alta3/llm-the-alta3-way`
 
 ```
-├── doc        # troubleshooting and other misc documentation
-  ── provider  # cloud gpu provider details and fix-up scripts
-├── model      # models with supporting fetch/clean/unsplit scripts
-├── playbook   # playbooks for deploying models and dependencies
-├── prompt     # prompts for testing/demonstration
-├── torch      # steps and resources for interacting with models from python
+├── ansible      # common playbooks and roles
+├── doc          # troubleshooting and other misc documentation
+│   └── provider # cloud gpu provider details and fix-up scripts
+├── model        # models with supporting fetch/clean/unsplit scripts
+└── prompt       # prompts for testing/demonstration
 ```
 
 ## Assumptions
@@ -16,7 +15,7 @@
 
 ## Quickstart
 
-1. Complete the [provder specific](doc/provider/README.md) baseline pre-playbook script.
+1. Complete the [provider specific](doc/provider/README.md) baseline pre-playbook script.
 
 0. Setup ansible and clone this repo
 

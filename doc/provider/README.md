@@ -4,6 +4,7 @@ Specific setups and scripts for navigating the cloud gpu landscape
 
 ### [DataCrunch.io](./datacrunch/README.md)
 
+- [Provider specific setup](./datacrunch/setup.sh)
 - [Home Page](https://datacrunch.io)
 - Ubuntu 22.04 image
 - GPUs:
