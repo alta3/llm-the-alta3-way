@@ -17,6 +17,10 @@
 
 1. Complete the [provider specific](doc/provider/README.md) baseline pre-playbook script.
 
+0. Exit the provider's machine.
+
+0. ssh back into the provider as ubuntu.
+
 0. Setup ansible and clone this repo
 
    ```bash
