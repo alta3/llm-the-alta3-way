@@ -21,13 +21,7 @@
 
    ```bash
    {
-     sudo apt update 
-     DEBIAN_FRONTEND=noninteractive NEEDRESTART_MODE=a \
-     sudo -E apt-get install -y \
-         git \
-         python3-pip \
-         python3-venv \
-         cuda-toolkit-12-2
+     bash ansible/nvidia.sh
      python3 -m pip install --upgrade --user pip
      python3 -m pip install --user ansible
      git clone https://github.com/alta3/llm-the-alta3-way.git

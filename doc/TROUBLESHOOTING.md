@@ -9,16 +9,5 @@ CUDA error 222 at /home/runner/work/ctransformers/ctransformers/models/ggml/ggml
 Fix:
 
 ```bash
-{
-  sudo apt --purge remove -y "*cublas*" "cuda*" "*nvidia*"
-  sudo apt clean
-  sudo apt autoremove -y
-  
-  DEBIAN_FRONTEND=noninteractive NEEDRESTART_MODE=a \
-  sudo -E apt-get install -y nvidia-cuda-toolkit
-}
+bash ansible/nvidia.sh
 ```
-
-Or try `cuda-toolkit-12-2` instead
-
-

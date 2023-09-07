@@ -6,14 +6,8 @@
   hosts: all
   vars:
     model_dir: "{{ llm_model_dir }}/falcon-40b-instruct"
-    aria2_list: "model-min.list"
+    model_list: "model-min.list"
     llama_dir: "{{ llm_git_dir }}/llama.cpp"
-
-  roles:
-    - name: Install llama.cpp
-      role: ../../ansible/roles/llama.cpp
-      vars: 
-        llama_dir: "{{ llm_git_dir }}/llama.cpp"
 
   tasks:
     - name: Verify variables
@@ -22,12 +16,17 @@
          - "llama_dir: {{ llama_dir }}"
          - "src_model_dir: {{ src_model_dir }}"
          - "model_dir: {{ model_dir }}"
-         - "aria2_list: {{ aria2_list }}"
+         - "model_list: {{ model_list }}"
 
-    - name: Create Falcon model dir
+    - name: Create Model dir
       file:
         path: "{{ model_dir }}"
         state: directory
+
+    - name: Verify deployed modle file list
+      file:
+        path: "{{ model_dir }}/{{ model_list }}"
+        state: file
 
     - name: Fetch Model Parameters
       script:
@@ -37,11 +36,13 @@
     - name: Example usage
       debug:
         msg: 
-          - "cd {{ llama_dir }}"
-          - "python3 -m venv venv"
-          - "source venv/bin/activate"
-          - "python3 -m pip install -r requirements.txt"
-          - "python3 -m pip install torch transformers"
-          - "./convert-falcon-hf-to-gguf.py ../../model/falcon-40b-instruct 1"
-          - "./main -ngl <LAYERS> --threads 14 --model {{ model_dir }}/<MODEL> --file {{ llm_prompt_dir }}/instruct/instruct-ansible.txt"
+          - "see {{ model_dir }}/README.md for example usage"
+            # TODO delete after README.md written
+            #- "cd {{ llama_dir }}"
+            #- "python3 -m venv venv"
+            #- "source venv/bin/activate"
+            #- "python3 -m pip install -r requirements.txt"
+            #- "python3 -m pip install torch transformers"
+            #- "./convert-falcon-hf-to-gguf.py ../../model/falcon-40b-instruct 1"
+            #- "./main -ngl <LAYERS> --threads 14 --model {{ model_dir }}/<MODEL> --file {{ llm_prompt_dir }}/instruct/instruct-ansible.txt"
         

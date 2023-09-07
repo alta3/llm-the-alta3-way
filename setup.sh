@@ -5,7 +5,7 @@ sudo -E apt-get install -y \
     git \
     python3-pip \
     python3-venv \
-    cuda-drivers-12-2
+    cuda-drivers-11-8
 python3 -m pip install --upgrade --user pip
 python3 -m pip install --user ansible
 

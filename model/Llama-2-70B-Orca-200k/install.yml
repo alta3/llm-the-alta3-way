@@ -6,14 +6,8 @@
   hosts: all
   vars:
     model_dir: "{{ llm_model_dir }}/Llama-2-70B-Orca-200k"
-    aria2_list: "model-min.list"
+    model_list: "model-min.list"
     llama_dir: "{{ llm_git_dir }}/llama.cpp"
-
-  roles:
-    - name: Install llama.cpp
-      role: ../../ansible/roles/llama.cpp
-      vars: 
-        llama_dir: "{{ llm_git_dir }}/llama.cpp"
 
   tasks:
     - name: Verify variables
@@ -21,7 +15,8 @@
         msg:
          - "llama_dir: {{ llama_dir }}"
          - "model_dir: {{ model_dir }}"
-         - "aria2_list: {{ aria2_list }}"
+         - "model_list: {{ model_list }}"
+
 
     - name: Create Model dir
       file:
@@ -30,7 +25,7 @@
 
     - name: Verify deployed modle file list
       file:
-        path: "{{ model_dir }}/{{ aria2_list }}"
+        path: "{{ model_dir }}/{{ model_list }}"
         state: file
 
     - name: Fetch Model Parameters
@@ -41,7 +36,9 @@
     - name: Example usage
       debug:
         msg: 
-          - "cd {{ model_dir }} && ./unsplit"
-          - "cd {{ llama_dir }}"
-          - "./main -ngl <LAYERS> --threads 14 --model {{ model_dir }}/<model>.gguf --file {{ llm_prompt_dir }}/instruct/ansible.txt"
-        
+          - "see {{ model_dir }}/README.md for example usage"
+            # TODO delete after README.md written
+            #  - "cd {{ model_dir }} && ./unsplit"
+            #  - "cd {{ llama_dir }}"
+            #  - "./main -ngl <LAYERS> --threads 14 --model {{ model_dir }}/<model>.gguf --file {{ llm_prompt_dir }}/instruct/ansible.txt"
+            #

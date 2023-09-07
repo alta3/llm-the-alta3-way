@@ -5,7 +5,6 @@
 default_apt_list:
   # build 
   - build-essential
-  - nvidia-cuda-toolkit
   # fetch
   - git
   - git-lfs

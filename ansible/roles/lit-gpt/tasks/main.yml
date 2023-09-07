@@ -1,0 +1,15 @@
+---
+# roles/lit-gpt/tasks/main.yml
+- name: Verify variables
+  debug: 
+    msg:
+     - "lit_dir: {{ lit_dir }}"       # role invocation
+     - "lit_repo: {{ lit_repo }}"     # roles/lit/defaults/main.yml
+     - "lit_branch: {{ lit_branch }}" # roles/lit/defaults/main.yml
+
+- name: Clone lit.cpp
+  git:
+    repo: "{{ lit_repo }}"   
+    dest: "{{ lit_dir }}"     
+    single_branch: True
+    version: "{{ lit_branch }}"

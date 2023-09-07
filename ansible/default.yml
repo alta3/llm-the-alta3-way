@@ -17,3 +17,13 @@
       hfdownloader_dir: "{{ llm_git_dir }}/hfdownloader"  # group_vars/all.yml
       install_dir: "{{ llm_bin_dir }}"                    # group_vars/all.yml
       golang_cc: '{{ golang_install_dir }}/bin/go'
+
+  - name: Install llama.cpp
+    role: llama.cpp
+    vars: 
+      llama_dir: "{{ llm_git_dir }}/llama.cpp"
+
+  - name: Install lit-gpt
+    role: lit-gpt
+    vars: 
+      lit-gpt: "{{ llm_git_dir }}/lit-gpt"

@@ -1,0 +1,5 @@
+---
+# roles/lit-gpt/defaults/main.yml
+
+lit_repo: https://github.com/lightning-ai/lit-gpt.git
+lit_branch: "main"
