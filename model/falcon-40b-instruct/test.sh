@@ -4,7 +4,8 @@
 cd -P -- "$(dirname -- "$0")"
 
 # Install `numpy`, `transformers` `torch` required for conversion script
-python3 -m pip install numpy torch transformers
+python3 -m pip install --pre torch torchvision torchaudio numpy --index-url https://download.pytorch.org/whl/nightly/cu121
+
 
 # Convert from ggmlv3 to gguf format:
 ../../git/llama.cpp/convert-falcon-hf-to-gguf.py \
