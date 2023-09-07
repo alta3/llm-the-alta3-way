@@ -1,7 +1,7 @@
 #!/bin/bash
 sudo apt update 
 DEBIAN_FRONTEND=noninteractive NEEDRESTART_MODE=a \
-sudo -E apt-get install -y 
+sudo -E apt-get install -y \
     git \
     python3-pip \
     python3-venv \
