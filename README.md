@@ -20,7 +20,15 @@
 0. Setup ansible and clone this repo
 
    ```bash
-   bash setup.sh
+   {
+     sudo apt update 
+     DEBIAN_FRONTEND=noninteractive NEEDRESTART_MODE=a \
+     sudo -E apt-get install -y python3-pip python3-venv git
+     python3 -m pip install --upgrade --user pip
+     python3 -m pip install --user ansible
+     git clone https://github.com/alta3/llm-the-alta3-way
+     cd llm-the-alta3-way
+   }
    ```
 
 0. Source `.profile` or `.bashrc` to ensure `~/.local/bin/` is in `$PATH`
