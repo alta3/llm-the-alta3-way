@@ -30,8 +30,8 @@
         state: directory
 
     - name: Fetch Model Parameters
-      shell:
-        script: "fetch-min.sh"
+      script:
+        cmd: "fetch-min.sh"
         chdir: "{{ model_dir }}"
 
     - name: Example usage
