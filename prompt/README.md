@@ -27,3 +27,11 @@ prompt/
 
 Sample data that is used for model analysis input.
 Used for testing and comparing model's abilies with similar inputs.
+
+### `instruct`
+
+These are sample prompts that are used to demonstrate the instruct style of prompting
+
+### `orca`
+
+The orca model uses a specific prompt style, different from other models. Use the prompts as an example of effective "orca-style" prompt writing.
