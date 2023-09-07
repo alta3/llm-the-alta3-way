@@ -2,13 +2,13 @@
 
 ## Primary sources
 
-- [psmathur/orca_mini_v3_13b](https://huggingface.co/psmathur/orca_mini_v3_13b)
-- [TheBloke/orca_mini_v3_13B-GGML](https://huggingface.co/TheBloke/orca_mini_v3_13B-GGML)
+- Original model: [psmathur/orca_mini_v3_13b](https://huggingface.co/psmathur/orca_mini_v3_13b)
+- Quantized: [TheBloke/orca_mini_v3_13B-GGML](https://huggingface.co/TheBloke/orca_mini_v3_13B-GGML)
 
 ## Local copies of Model Cards
 
-- [psmathur_README.md](./psmathur_README.md)
-- [TheBloke_README.md](./TheBloke_README.md)
+- Original model: [README_psmathur.md](./README_psmathur.md)
+- Quantized: [README_TheBloke.md](./README_TheBloke.md)
 
 ## Quickstart
 

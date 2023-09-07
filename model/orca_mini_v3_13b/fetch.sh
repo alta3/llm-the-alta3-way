@@ -1,1 +1,1 @@
-../fetch.sh
+../scripts/fetch.sh
