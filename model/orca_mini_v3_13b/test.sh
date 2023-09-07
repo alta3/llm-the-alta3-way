@@ -7,7 +7,7 @@ cd -P -- "$(dirname -- "$0")"
 python3 -m pip install numpy
 
 # Convert from ggmlv3 to gguf format:
-../../git/llama.cpp/convert-llama-ggmlv3-to-gguf.py \
+../../git/llama.cpp/convert-llama-ggml-to-gguf.py \
     --input  model/orca_mini_v3_13b.ggmlv3.q8_0.bin \
     --output model/orca_mini_v3_13b.gguf.q8_0.bin
 

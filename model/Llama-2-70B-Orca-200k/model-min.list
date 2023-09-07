@@ -1,12 +1,12 @@
 https://huggingface.co/TheBloke/Llama-2-70B-Orca-200k-GGUF/resolve/main/llama-2-70b-orca-200k.Q2_K.gguf
-  out=llama-2-70b-orca-200k.Q2_K.gguf
+  out=/model/llama-2-70b-orca-200k.Q2_K.gguf
 https://huggingface.co/TheBloke/Llama-2-70B-Orca-200k-GGUF/resolve/main/llama-2-70b-orca-200k.Q3_K_L.gguf
-  out=llama-2-70b-orca-200k.Q3_K_L.gguf
+  out=/model/llama-2-70b-orca-200k.Q3_K_L.gguf
 https://huggingface.co/TheBloke/Llama-2-70B-Orca-200k-GGUF/resolve/main/llama-2-70b-orca-200k.Q3_K_M.gguf
-  out=llama-2-70b-orca-200k.Q3_K_M.gguf
+  out=/model/llama-2-70b-orca-200k.Q3_K_M.gguf
 https://huggingface.co/TheBloke/Llama-2-70B-Orca-200k-GGUF/resolve/main/llama-2-70b-orca-200k.Q3_K_S.gguf
-  out=llama-2-70b-orca-200k.Q3_K_S.gguf
+  out=/model/llama-2-70b-orca-200k.Q3_K_S.gguf
 https://huggingface.co/TheBloke/Llama-2-70B-Orca-200k-GGUF/resolve/main/llama-2-70b-orca-200k.Q8_0.gguf-split-a
-  out=llama-2-70b-orca-200k.Q8_0.gguf-split-a
+  out=/model/llama-2-70b-orca-200k.Q8_0.gguf-split-a
 https://huggingface.co/TheBloke/Llama-2-70B-Orca-200k-GGUF/resolve/main/llama-2-70b-orca-200k.Q8_0.gguf-split-b
-  out=llama-2-70b-orca-200k.Q8_0.gguf-split-b
+  out=/model/llama-2-70b-orca-200k.Q8_0.gguf-split-b
