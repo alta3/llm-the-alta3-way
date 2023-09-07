@@ -69,8 +69,7 @@ Deployed by this repo's base role, this directory structure is a non-git directo
 │   ├── git            # installed git repos
 │   │   └── llama.cpp  # inference of LLaMA model in pure C/C++
 │   ├── model          # deployed models
-│   ├── prompt         # prompts for testing/demonstration      
-│   └── torch          # steps and resources for interacting with models from python
+│   └── prompt         # prompts for testing/demonstration      
 └── llm-the-alta3-way  # this repo checked out
 ```
 
