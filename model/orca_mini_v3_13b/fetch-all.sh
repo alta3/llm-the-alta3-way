@@ -1,0 +1,1 @@
+../scripts/fetch-all.sh

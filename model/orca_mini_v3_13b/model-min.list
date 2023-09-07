@@ -1,0 +1,8 @@
+https://huggingface.co/TheBloke/orca_mini_v3_13b-GGML/resolve/main/orca_mini_v3_13b.ggmlv3.q2_K.bin
+    out=/model/orca_mini_v3_13b.ggmlv3.q2_K.bin
+https://huggingface.co/TheBloke/orca_mini_v3_13b-GGML/resolve/main/orca_mini_v3_13b.ggmlv3.q4_K_M.bin
+    out=/model/orca_mini_v3_13b.ggmlv3.q4_K_M.bin
+https://huggingface.co/TheBloke/orca_mini_v3_13b-GGML/resolve/main/orca_mini_v3_13b.ggmlv3.q4_K_S.bin
+    out=/model/orca_mini_v3_13b.ggmlv3.q4_K_S.bin
+https://huggingface.co/TheBloke/orca_mini_v3_13b-GGML/resolve/main/orca_mini_v3_13b.ggmlv3.q8_0.bin
+    out=/model/orca_mini_v3_13b.ggmlv3.q8_0.bin

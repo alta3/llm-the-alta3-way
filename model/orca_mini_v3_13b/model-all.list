@@ -1,28 +1,28 @@
 https://huggingface.co/TheBloke/orca_mini_v3_13b-GGML/resolve/main/orca_mini_v3_13b.ggmlv3.q2_K.bin
-    out=orca_mini_v3_13b.ggmlv3.q2_K.bin
+    out=/model/orca_mini_v3_13b.ggmlv3.q2_K.bin
 https://huggingface.co/TheBloke/orca_mini_v3_13b-GGML/resolve/main/orca_mini_v3_13b.ggmlv3.q3_K_L.bin
-    out=orca_mini_v3_13b.ggmlv3.q3_K_L.bin
+    out=/model/orca_mini_v3_13b.ggmlv3.q3_K_L.bin
 https://huggingface.co/TheBloke/orca_mini_v3_13b-GGML/resolve/main/orca_mini_v3_13b.ggmlv3.q3_K_M.bin
-    out=orca_mini_v3_13b.ggmlv3.q3_K_M.bin
+    out=/model/orca_mini_v3_13b.ggmlv3.q3_K_M.bin
 https://huggingface.co/TheBloke/orca_mini_v3_13b-GGML/resolve/main/orca_mini_v3_13b.ggmlv3.q3_K_S.bin
-    out=orca_mini_v3_13b.ggmlv3.q3_K_S.bin
+    out=/model/orca_mini_v3_13b.ggmlv3.q3_K_S.bin
 https://huggingface.co/TheBloke/orca_mini_v3_13b-GGML/resolve/main/orca_mini_v3_13b.ggmlv3.q4_0.bin
-    out=orca_mini_v3_13b.ggmlv3.q4_0.bin
+    out=/model/orca_mini_v3_13b.ggmlv3.q4_0.bin
 https://huggingface.co/TheBloke/orca_mini_v3_13b-GGML/resolve/main/orca_mini_v3_13b.ggmlv3.q4_1.bin
-    out=orca_mini_v3_13b.ggmlv3.q4_1.bin
+    out=/model/orca_mini_v3_13b.ggmlv3.q4_1.bin
 https://huggingface.co/TheBloke/orca_mini_v3_13b-GGML/resolve/main/orca_mini_v3_13b.ggmlv3.q4_K_M.bin
-    out=orca_mini_v3_13b.ggmlv3.q4_K_M.bin
+    out=/model/orca_mini_v3_13b.ggmlv3.q4_K_M.bin
 https://huggingface.co/TheBloke/orca_mini_v3_13b-GGML/resolve/main/orca_mini_v3_13b.ggmlv3.q4_K_S.bin
-    out=orca_mini_v3_13b.ggmlv3.q4_K_S.bin
+    out=/model/orca_mini_v3_13b.ggmlv3.q4_K_S.bin
 https://huggingface.co/TheBloke/orca_mini_v3_13b-GGML/resolve/main/orca_mini_v3_13b.ggmlv3.q5_0.bin
-    out=orca_mini_v3_13b.ggmlv3.q5_0.bin
+    out=/model/orca_mini_v3_13b.ggmlv3.q5_0.bin
 https://huggingface.co/TheBloke/orca_mini_v3_13b-GGML/resolve/main/orca_mini_v3_13b.ggmlv3.q5_1.bin
-    out=orca_mini_v3_13b.ggmlv3.q5_1.bin
+    out=/model/orca_mini_v3_13b.ggmlv3.q5_1.bin
 https://huggingface.co/TheBloke/orca_mini_v3_13b-GGML/resolve/main/orca_mini_v3_13b.ggmlv3.q5_K_M.bin
-    out=orca_mini_v3_13b.ggmlv3.q5_K_M.bin
+    out=/model/orca_mini_v3_13b.ggmlv3.q5_K_M.bin
 https://huggingface.co/TheBloke/orca_mini_v3_13b-GGML/resolve/main/orca_mini_v3_13b.ggmlv3.q5_K_S.bin
-    out=orca_mini_v3_13b.ggmlv3.q5_K_S.bin
+    out=/model/orca_mini_v3_13b.ggmlv3.q5_K_S.bin
 https://huggingface.co/TheBloke/orca_mini_v3_13b-GGML/resolve/main/orca_mini_v3_13b.ggmlv3.q6_K.bin
-    out=orca_mini_v3_13b.ggmlv3.q6_K.bin
+    out=/model/orca_mini_v3_13b.ggmlv3.q6_K.bin
 https://huggingface.co/TheBloke/orca_mini_v3_13b-GGML/resolve/main/orca_mini_v3_13b.ggmlv3.q8_0.bin
-    out=orca_mini_v3_13b.ggmlv3.q8_0.bin
+    out=/model/orca_mini_v3_13b.ggmlv3.q8_0.bin
