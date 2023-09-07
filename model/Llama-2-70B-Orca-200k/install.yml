@@ -23,7 +23,7 @@
         path: "{{ model_dir }}"
         state: directory
 
-    - name: Verify deployed modle file list
+    - name: Verify deployed model file list
       file:
         path: "{{ model_dir }}/{{ model_list }}"
         state: file
