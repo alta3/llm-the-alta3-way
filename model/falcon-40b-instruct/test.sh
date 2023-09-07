@@ -3,8 +3,8 @@
 # change into this script's dir
 cd -P -- "$(dirname -- "$0")"
 
-# Install `numpy`, required for conversion script:
-python3 -m pip install numpy
+# Install `numpy`, `transformers` `torch` required for conversion script
+python3 -m pip install numpy torch transformers
 
 # Convert from ggmlv3 to gguf format:
 ../../git/llama.cpp/convert-falcon-hf-to-gguf.py \
