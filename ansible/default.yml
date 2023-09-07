@@ -26,4 +26,4 @@
   - name: Install lit-gpt
     role: lit-gpt
     vars: 
-      lit-gpt: "{{ llm_git_dir }}/lit-gpt"
+      lit_gpt: "{{ llm_git_dir }}/lit-gpt"
