@@ -6,7 +6,7 @@
   hosts: all
   vars:
     model_dir: "{{ llm_model_dir }}/orca_mini_v3_13b"
-    aria2_list: "model.list"
+    aria2_list: "model-min.list"
     llama_dir: "{{ llm_git_dir }}/llama.cpp"
 
   roles:

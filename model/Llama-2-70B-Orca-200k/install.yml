@@ -6,7 +6,7 @@
   hosts: all
   vars:
     model_dir: "{{ llm_model_dir }}/Llama-2-70B-Orca-200k"
-    aria2_list: "model.list"
+    aria2_list: "model-min.list"
     llama_dir: "{{ llm_git_dir }}/llama.cpp"
 
   roles:
@@ -35,7 +35,7 @@
 
     - name: Fetch Model Parameters
       shell:
-        cmd: "aria2c --input-file '{{ aria2_list }}' -x 16 -j 16 -s 16 -c"
+        script: "fetch-min.sh"
         chdir: "{{ model_dir }}"
 
     - name: Example usage
