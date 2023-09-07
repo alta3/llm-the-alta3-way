@@ -27,9 +27,11 @@
          git \
          python3-pip \
          python3-venv \
-         cuda-drivers-12-2
+         cuda-toolkit-12-2
      python3 -m pip install --upgrade --user pip
      python3 -m pip install --user ansible
+     git clone https://github.com/alta3/llm-the-alta3-way.git
+     cd llm-the-alta3-way
    }
    ```
 
@@ -45,8 +47,8 @@
 0. Select a model and Run (see models section for specific playbooks)
 
    ```bash
-   ansible-playbook model/<model>/install.yml
-   ~/llm/model/<model>/test.sh
+   ansible-playbook model/{{ model }}/install.yml
+   ~/llm/model/{{ model }}/test.sh
    ```
 
 ## Models
