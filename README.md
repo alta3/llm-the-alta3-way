@@ -1,11 +1,11 @@
 # `alta3/llm-the-alta3-way`
 
 ```
-├── docs       # troubleshooting and other misc documentation
+├── doc        # troubleshooting and other misc documentation
+  ── provider  # cloud gpu provider details and fix-up scripts
 ├── model      # models with supporting fetch/clean/unsplit scripts
 ├── playbook   # playbooks for deploying models and dependencies
 ├── prompt     # prompts for testing/demonstration
-├── providers  # cloud gpu provider details and fix-up scripts
 ├── torch      # steps and resources for interacting with models from python
 ```
 
@@ -16,7 +16,9 @@
 
 ## Quickstart
 
-Baseline pre-playbook installs and updates
+1. Complete the [provder specific](doc/provider/README.md) baseline pre-playbook script.
+
+0. Setup ansible and clone this repo
 
 ```bash
 {
@@ -30,21 +32,23 @@ Baseline pre-playbook installs and updates
 }
 ```
 
-Optional:
+0. Source `.profile` or `.bashrc` to ensure `~/.local/bin/` is in `$PATH`
+
+0. TEMP OPTIONAL:
 
 ```bash
 sudo apt install -y cuda-drivers
 sudo reboot
 ```
 
-Run (see models section for specific playbooks)
+0. Select a model and Run (see models section for specific playbooks)
 
 ```bash
-# may need to source .profile or .bashrc to add ~/.local/bin/ to $PATH
-ansible-playbook playbook/<model>.yml
+ansible-playbook model/<model>/install.yml
+./model/<model>/test.sh
 ```
 
-### Models
+## Models
 
 - [x] [Llama2 70B Orca 200k GGUF](https://huggingface.co/TheBloke/Llama-2-70B-Orca-200k-GGUF)
    ```bash
@@ -112,7 +116,6 @@ Deployed by this repo's base role, this directory structure is a non-git directo
    ```bash
    go help; go version; which go
    ```
-
 
 ### Deprecated
 
