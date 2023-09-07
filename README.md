@@ -19,33 +19,33 @@
 
 0. Setup ansible and clone this repo
 
-```bash
-{
-  sudo apt update 
-  DEBIAN_FRONTEND=noninteractive NEEDRESTART_MODE=a \
-  sudo -E apt-get install -y python3-pip python3-venv git
-  python3 -m pip install --upgrade --user pip
-  python3 -m pip install --user ansible
-  git clone https://github.com/alta3/llm-the-alta3-way
-  cd llm-the-alta3-way
-}
-```
+   ```bash
+   {
+     sudo apt update 
+     DEBIAN_FRONTEND=noninteractive NEEDRESTART_MODE=a \
+     sudo -E apt-get install -y python3-pip python3-venv git
+     python3 -m pip install --upgrade --user pip
+     python3 -m pip install --user ansible
+     git clone https://github.com/alta3/llm-the-alta3-way
+     cd llm-the-alta3-way
+   }
+   ```
 
 0. Source `.profile` or `.bashrc` to ensure `~/.local/bin/` is in `$PATH`
 
 0. TEMP OPTIONAL:
 
-```bash
-sudo apt install -y cuda-drivers
-sudo reboot
-```
+   ```bash
+   sudo apt install -y cuda-drivers
+   sudo reboot
+   ```
 
 0. Select a model and Run (see models section for specific playbooks)
 
-```bash
-ansible-playbook model/<model>/install.yml
-./model/<model>/test.sh
-```
+   ```bash
+   ansible-playbook model/<model>/install.yml
+   ./model/<model>/test.sh
+   ```
 
 ## Models
 
