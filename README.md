@@ -23,28 +23,30 @@
    {
      sudo apt update 
      DEBIAN_FRONTEND=noninteractive NEEDRESTART_MODE=a \
-     sudo -E apt-get install -y python3-pip python3-venv git
+     sudo -E apt-get install -y \
+         git \
+         python3-pip \
+         python3-venv \
+         cuda-drivers-12-2
      python3 -m pip install --upgrade --user pip
      python3 -m pip install --user ansible
-     git clone https://github.com/alta3/llm-the-alta3-way
-     cd llm-the-alta3-way
    }
    ```
 
-0. Source `.profile` or `.bashrc` to ensure `~/.local/bin/` is in `$PATH`
-
-0. TEMP OPTIONAL:
+   Reboot required if cuda-drivers were installed.
+   Run `nvidia-smi` to verify versions.
 
    ```bash
-   sudo apt install -y cuda-drivers
-   sudo reboot
+   nvidia-smi
    ```
+
+0. Source `.profile` or `.bashrc` to ensure `~/.local/bin/` is in `$PATH`
 
 0. Select a model and Run (see models section for specific playbooks)
 
    ```bash
    ansible-playbook model/<model>/install.yml
-   ./model/<model>/test.sh
+   ~/llm/model/<model>/test.sh
    ```
 
 ## Models
