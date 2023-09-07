@@ -1,1 +1,6 @@
-Create a Python program that calculates the average of a given list of numbers in Python. You should use a for loop to calculate the average without relying on built-in functions or libraries. The input is a list of numbers, for example: [5, 10, 15, 20, 25], and the expected output is the calculated average, like: The average is 15. Ensure that your code is well-structured with clear variable names and includes comments to explain each step.
+Create a Python program that calculates the average of a given list of numbers 
+in Python. You should use a for loop to calculate the average without relying 
+on built-in functions or libraries. The input is a list of numbers, for example: 
+[5, 10, 15, 20, 25], and the expected output is the calculated average, like: 
+The average is 15. Ensure that your code is well-structured with clear variable 
+names and includes comments to explain each step.
