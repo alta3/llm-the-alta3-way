@@ -6,6 +6,6 @@
     q4_k_m
     
 # Test quantization efficacy by running a prompt. Success will result in response tokens being generated
-../../git/llama.cpp/main -ngl 100 --threads 21 \
+../../git/llama.cpp/main -ngl 83 --threads 22 \
     --model model/falcon-40b-instruct.gguf.q4_k_m.bin \
     --file ../../prompt/instruct/ansible.txt
