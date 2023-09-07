@@ -38,7 +38,6 @@
   synchronize:
     src: "{{ item.src }}/"
     dest: "{{ item.dest }}/"
-    mode: "preserve"
   loop:
   - src: "{{ src_prompt_dir }}/"
     dest: "{{ llm_prompt_dir }}/"
