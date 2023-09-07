@@ -25,11 +25,11 @@
 
    ```bash
    {
+     git clone https://github.com/alta3/llm-the-alta3-way.git
+     cd llm-the-alta3-way
      bash ansible/nvidia.sh
      python3 -m pip install --upgrade --user pip
      python3 -m pip install --user ansible
-     git clone https://github.com/alta3/llm-the-alta3-way.git
-     cd llm-the-alta3-way
    }
    ```
 
