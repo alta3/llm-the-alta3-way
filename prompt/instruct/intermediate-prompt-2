@@ -1,0 +1,9 @@
+Write Python code to calculate the total monthly revenue for a subscription-based service. 
+The input is a dictionary containing subscription data. Each key-value pair represents a 
+customer's subscription plan and monthly payment amount. Additionally, provide a list of 
+customers who canceled their subscriptions that month, for example: ['Customer2', 'Customer4']. 
+Compute the total monthly revenue, taking into account the canceled subscriptions. Ensure 
+that the solution is implemented using a for loop to iterate through the subscription data.
+Avoid using built-in functions or libraries for summing the values. Write clear Python code 
+with descriptive variable names. Add comments to explain each step of the calculation, 
+including how canceled subscriptions are accounted for.
