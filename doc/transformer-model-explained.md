@@ -199,6 +199,16 @@ Layer normalization helps to make the output of the layer more independent of th
 
 The "Add & Norm" portion is a simple but effective technique that can be used to improve the performance of deep learning models. It is a common pattern in many deep learning models, including the Transformer model.
 
+# Embeddings
+
+The key/value/query formulation of attention is from the paper Attention Is All You Need.
+
+How should one understand the queries, keys, and values
+
+The key/value/query concept is analogous to retrieval systems. For example, when you search for videos on Youtube, the search engine will map your query (text in the search bar) against a set of keys (video title, description, etc.) associated with candidate videos in their database, then present you the best matched videos (values).
+
+The attention operation can be thought of as a retrieval process as well.
+
 # Overfitting
 
 Overfitting is a machine learning problem that occurs when a model learns the training data too well and is unable to generalize to new data. This can happen when the model is too complex or when the training data is not representative of the real world data.
