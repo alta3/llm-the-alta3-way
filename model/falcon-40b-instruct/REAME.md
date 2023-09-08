@@ -8,7 +8,7 @@
 
 ## Local copies of Model Cards
 
-- Original model: <a href="./README_tiiuae.md" target="_blank">README_ttiuae.md</a> 
+- Original model: <a href="./README_tiiuae.md" target="_blank" rel="noreferrer" >README_ttiuae.md</a> 
   <!-- Same problem as above -->
 <!-- - Quantized: [README_TheBloke.md](./README_TheBloke.md) -->
 
