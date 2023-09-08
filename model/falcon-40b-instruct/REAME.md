@@ -8,7 +8,7 @@
 
 ## Local copies of Model Cards
 
-- Original model: [README_psmathur.md](./README_psmathur.md)
+- Original model: [README_ttiuae.md](./README_tiiuae.md)
 - Quantized: [README_TheBloke.md](./README_TheBloke.md)
 
 ## Quickstart
