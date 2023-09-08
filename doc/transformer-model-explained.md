@@ -121,7 +121,9 @@ The attention weights are then used to compute a weighted sum of the values, whi
 
 In other words, matrix multiplication is used to compute the importance of each hidden state in the encoder for the current input token in the decoder. This allows the LLM to learn long-range dependencies in sequences and to generate more accurate and relevant output.
 
+### Softmax Function
 
+The softmax function is often used in the output layer to generate probabilities for the next token in the sequence. _The softmax function takes the output of the hidden layer and transforms it into a vector of probabilities, where each probability represents the likelihood of the next token being a particular word._
 
 # Scaled Dot Product Attention
 
