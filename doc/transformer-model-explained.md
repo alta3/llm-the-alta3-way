@@ -226,3 +226,7 @@ However, in general, it is important to avoid overfitting in order to ensure tha
 - Embeddings: Dense vector representations of tokens which capture semantic information about the tokens, meaning that similar words or characters will have similar vector representations.
 - Hidden state: A vector that represents the internal state of a neural network at a given time step.
 - Weighted sum: A mathematical operation that takes a set of hidden states and a set of weights, and returns a single hidden state.
+- Query (Q): represents the current word or token for which we want to calculate the attention. (Question?)
+- Key (K): represents the word to which we are paying attention. (Evidence? Context?)
+- Value (V):rates the relevance of the pairs of words that make up each attention score.
+  
