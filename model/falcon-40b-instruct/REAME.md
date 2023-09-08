@@ -9,15 +9,16 @@
 ## Local copies of Model Cards
 
 - Original model: [README_ttiuae.md](./README_tiiuae.md)
-- Quantized: [README_TheBloke.md](./README_TheBloke.md)
+  <!-- Same problem as above -->
+<!-- - Quantized: [README_TheBloke.md](./README_TheBloke.md) -->
 
 ## Quickstart
 
 ```bash
-ansible-playbook model/orca_mini_v3_13b/install.yml
+ansible-playbook model/falcon-40b-instruct/install.yml
 ```
 
 ```bash
-./model/orca_mini_v3_13b/test.sh
+./model/falcon-40b-instruct/test.sh
 ```
-https://huggingface.co/tiiuae/falcon-40b-instruct
+
