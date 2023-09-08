@@ -77,6 +77,68 @@ Here are some of the factors that can affect the optimal number of layers in the
 
 It is important to experiment with different numbers of layers to find the optimal setting for a particular task.
 
+# Multi-Head Attention
+
+Multi-head attention is an attention mechanism that is used in the Transformer model. It is a way of attending to different parts of the input sequence in parallel. This allows the model to learn long-range dependencies in the sequence.
+
+Multi-head attention works by first splitting the query, key, and value vectors into multiple heads. Each head attends to a different part of the input sequence. The outputs of the heads are then combined to form a single output vector.
+
+The number of heads is a hyperparameter that can be tuned. The more heads there are, the more different parts of the input sequence the model can attend to. However, using more heads also makes the model more complex and computationally expensive.
+
+Multi-head attention is a powerful tool that can be used to learn long-range dependencies in sequences. It is a key component of the Transformer model, and it has been shown to be effective in a variety of natural language processing tasks.
+
+Here is a more detailed explanation of multi-head attention:
+
+* **Splitting the vectors into heads:** The query, key, and value vectors are first split into multiple heads. The number of heads is a hyperparameter that can be tuned.
+
+* **Attending to different parts of the input sequence:** Each head attends to a different part of the input sequence. This is done by computing the dot product between the query vector and each of the key vectors. The results of the dot products are then normalized using the softmax function.
+
+* **Combining the outputs of the heads:** The outputs of the heads are then combined to form a single output vector. This is done by averaging or concatenating the outputs of the heads.
+
+The multi-head attention mechanism is a powerful tool that can be used to learn long-range dependencies in sequences. It is a key component of the Transformer model, and it has been shown to be effective in a variety of natural language processing tasks.
+
+Here are some of the benefits of using multi-head attention:
+
+* It allows the model to attend to different parts of the input sequence in parallel.
+* It can learn long-range dependencies in the sequence.
+* It is more efficient than using a single attention head.
+
+Here are some of the drawbacks of using multi-head attention:
+
+* It makes the model more complex and computationally expensive.
+* It can be difficult to tune the hyperparameters.
+
+Overall, multi-head attention is a powerful tool that can be used to improve the performance of the Transformer model. However, it is important to consider the benefits and drawbacks before using it.Multi-head attention is an attention mechanism that is used in the Transformer model. It is a way of attending to different parts of the input sequence in parallel. This allows the model to learn long-range dependencies in the sequence.
+
+Multi-head attention works by first splitting the query, key, and value vectors into multiple heads. Each head attends to a different part of the input sequence. The outputs of the heads are then combined to form a single output vector.
+
+The number of heads is a hyperparameter that can be tuned. The more heads there are, the more different parts of the input sequence the model can attend to. However, using more heads also makes the model more complex and computationally expensive.
+
+Multi-head attention is a powerful tool that can be used to learn long-range dependencies in sequences. It is a key component of the Transformer model, and it has been shown to be effective in a variety of natural language processing tasks.
+
+Here is a more detailed explanation of multi-head attention:
+
+* **Splitting the vectors into heads:** The query, key, and value vectors are first split into multiple heads. The number of heads is a hyperparameter that can be tuned.
+
+* **Attending to different parts of the input sequence:** Each head attends to a different part of the input sequence. This is done by computing the dot product between the query vector and each of the key vectors. The results of the dot products are then normalized using the softmax function.
+
+* **Combining the outputs of the heads:** The outputs of the heads are then combined to form a single output vector. This is done by averaging or concatenating the outputs of the heads.
+
+The multi-head attention mechanism is a powerful tool that can be used to learn long-range dependencies in sequences. It is a key component of the Transformer model, and it has been shown to be effective in a variety of natural language processing tasks.
+
+Here are some of the benefits of using multi-head attention:
+
+* It allows the model to attend to different parts of the input sequence in parallel.
+* It can learn long-range dependencies in the sequence.
+* It is more efficient than using a single attention head.
+
+Here are some of the drawbacks of using multi-head attention:
+
+* It makes the model more complex and computationally expensive.
+* It can be difficult to tune the hyperparameters.
+
+Overall, multi-head attention is a powerful tool that can be used to improve the performance of the Transformer model. However, it is important to consider the benefits and drawbacks before using it.
+
 # Scaled Dot Product Attention
 
 Scaled dot product attention is an attention mechanism that is used in the Transformer model. It is a simple but effective way to measure the relationship between a query and a set of keys.
@@ -150,6 +212,10 @@ There are a number of ways to prevent overfitting, including:
 * Cross-validation: Cross-validation is a technique that evaluates the model on data that it has not seen before.
 * Early stopping: Early stopping is a technique that stops training the model when it starts to overfit the training data.
 
+It is important to note that overfitting is not always a bad thing. In some cases, it may be desirable for the model to perform well on the training data, even if it does not generalize well to new data. For example, a model that is used to diagnose diseases may be more accurate if it is trained on a large dataset of patients with known diseases.
+
+However, in general, it is important to avoid overfitting in order to ensure that the model is able to generalize to new data.
+
 # Key Terms
 
 - __Multihead attention__: a technique used in LLMs to allow the model to attend to different parts of the input sequence in different ways. This allows the model to learn more complex relationships between the input and output sequences.
@@ -160,7 +226,3 @@ There are a number of ways to prevent overfitting, including:
 - Embeddings: Dense vector representations of tokens which capture semantic information about the tokens, meaning that similar words or characters will have similar vector representations.
 - Hidden state: A vector that represents the internal state of a neural network at a given time step.
 - Weighted sum: A mathematical operation that takes a set of hidden states and a set of weights, and returns a single hidden state.
-
-It is important to note that overfitting is not always a bad thing. In some cases, it may be desirable for the model to perform well on the training data, even if it does not generalize well to new data. For example, a model that is used to diagnose diseases may be more accurate if it is trained on a large dataset of patients with known diseases.
-
-However, in general, it is important to avoid overfitting in order to ensure that the model is able to generalize to new data.
