@@ -2,7 +2,7 @@
 
 ## Primary sources
 
-- Original model:  <a href="[https://huggingface.co/tiiuae/falcon-40b-instruct](https://huggingface.co/TheBloke/Llama-2-70B-Orca-200k-GGUF)" target="_blank">TheBloke/Llama-2-70B-Orca-200k</a>
+- Original model:  <a href="https://huggingface.co/TheBloke/Llama-2-70B-Orca-200k-GGUF" target="_blank"> TheBloke/Llama-2-70B-Orca-200k </a>
 
 ## Local copies of Model Cards
 
