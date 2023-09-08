@@ -12,10 +12,10 @@
 ## Quickstart
 
 ```bash
-ansible-playbook model/tiiuae/falcon-40b-instruct/install.yml
+ansible-playbook model/TheBloke/Llama-2-70B-Orca-200k/install.yml
 ```
 
 ```bash
-./model/tiiuae/falcon-40b-instruct/test.sh
+./model/TheBloke/Llama-2-70B-Orca-200k/test.sh
 ```
 
