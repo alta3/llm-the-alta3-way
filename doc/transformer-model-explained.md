@@ -110,7 +110,7 @@ Here are some of the drawbacks of using multi-head attention:
 
 Overall, multi-head attention is a powerful tool that can be used to improve the performance of the Transformer model. However, it is important to consider the benefits and drawbacks before using it.
 
-### matrix multiplication
+### Matrix Multiplication
 In the context of LLMs, matrix multiplication is used to compute the attention weights in the attention mechanism. The attention mechanism is a key component of LLMs that allows them to learn long-range dependencies in sequences.
 
 The attention mechanism works by computing a weighted sum of the hidden states in the encoder, with the weights being determined by how relevant each hidden state is to the current input token in the decoder. Matrix multiplication is used to compute these attention weights.
