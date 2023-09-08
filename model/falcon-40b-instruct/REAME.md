@@ -2,7 +2,7 @@
 
 ## Primary sources
 
-- Original model: [TheBloke/falcon-40b-instruct](https://huggingface.co/TheBloke/falcon-40b-instruct)
+- Original model: [tiiuae/falcon-40b-instruct](https://huggingface.co/tiiuae/falcon-40b-instruct)
   <!-- This is a quantized model but it specifically mentions that it does NOT work with llama.cpp which means we can't use it, correct? -->
 <!-- - Quantized: [tiiuae/falcon-40b-instruct-GGML](https://huggingface.co/tiiuae/falcon-40b-instruct-GGML) -->
 
