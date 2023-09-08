@@ -108,35 +108,6 @@ Here are some of the drawbacks of using multi-head attention:
 * It makes the model more complex and computationally expensive.
 * It can be difficult to tune the hyperparameters.
 
-Overall, multi-head attention is a powerful tool that can be used to improve the performance of the Transformer model. However, it is important to consider the benefits and drawbacks before using it.Multi-head attention is an attention mechanism that is used in the Transformer model. It is a way of attending to different parts of the input sequence in parallel. This allows the model to learn long-range dependencies in the sequence.
-
-Multi-head attention works by first splitting the query, key, and value vectors into multiple heads. Each head attends to a different part of the input sequence. The outputs of the heads are then combined to form a single output vector.
-
-The number of heads is a hyperparameter that can be tuned. The more heads there are, the more different parts of the input sequence the model can attend to. However, using more heads also makes the model more complex and computationally expensive.
-
-Multi-head attention is a powerful tool that can be used to learn long-range dependencies in sequences. It is a key component of the Transformer model, and it has been shown to be effective in a variety of natural language processing tasks.
-
-Here is a more detailed explanation of multi-head attention:
-
-* **Splitting the vectors into heads:** The query, key, and value vectors are first split into multiple heads. The number of heads is a hyperparameter that can be tuned.
-
-* **Attending to different parts of the input sequence:** Each head attends to a different part of the input sequence. This is done by computing the dot product between the query vector and each of the key vectors. The results of the dot products are then normalized using the softmax function.
-
-* **Combining the outputs of the heads:** The outputs of the heads are then combined to form a single output vector. This is done by averaging or concatenating the outputs of the heads.
-
-The multi-head attention mechanism is a powerful tool that can be used to learn long-range dependencies in sequences. It is a key component of the Transformer model, and it has been shown to be effective in a variety of natural language processing tasks.
-
-Here are some of the benefits of using multi-head attention:
-
-* It allows the model to attend to different parts of the input sequence in parallel.
-* It can learn long-range dependencies in the sequence.
-* It is more efficient than using a single attention head.
-
-Here are some of the drawbacks of using multi-head attention:
-
-* It makes the model more complex and computationally expensive.
-* It can be difficult to tune the hyperparameters.
-
 Overall, multi-head attention is a powerful tool that can be used to improve the performance of the Transformer model. However, it is important to consider the benefits and drawbacks before using it.
 
 # Scaled Dot Product Attention
