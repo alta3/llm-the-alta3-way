@@ -110,6 +110,19 @@ Here are some of the drawbacks of using multi-head attention:
 
 Overall, multi-head attention is a powerful tool that can be used to improve the performance of the Transformer model. However, it is important to consider the benefits and drawbacks before using it.
 
+### matrix multiplication
+In the context of LLMs, matrix multiplication is used to compute the attention weights in the attention mechanism. The attention mechanism is a key component of LLMs that allows them to learn long-range dependencies in sequences.
+
+The attention mechanism works by computing a weighted sum of the hidden states in the encoder, with the weights being determined by how relevant each hidden state is to the current input token in the decoder. Matrix multiplication is used to compute these attention weights.
+
+For example, let's say we have an encoder with 100 hidden states and a decoder with 50 hidden states. We want to compute the attention weights between the encoder hidden states and the decoder hidden states. We can do this by multiplying the encoder hidden states matrix by the decoder hidden states matrix. The resulting matrix will have the same dimensions as the decoder hidden states matrix, and each element in the resulting matrix will represent the attention weight between the corresponding encoder hidden state and decoder hidden state.
+
+The attention weights are then used to compute a weighted sum of the values, which is used to represent the current input token in the decoder.
+
+In other words, matrix multiplication is used to compute the importance of each hidden state in the encoder for the current input token in the decoder. This allows the LLM to learn long-range dependencies in sequences and to generate more accurate and relevant output.
+
+
+
 # Scaled Dot Product Attention
 
 Scaled dot product attention is an attention mechanism that is used in the Transformer model. It is a simple but effective way to measure the relationship between a query and a set of keys.
