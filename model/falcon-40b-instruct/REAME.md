@@ -2,7 +2,7 @@
 
 ## Primary sources
 
-- Original model: [tiiuae/falcon-40b-instruct](https://huggingface.co/tiiuae/falcon-40b-instruct)
+- Original model: [TheBloke/Llama-2-70B-Orca-200k](https://huggingface.co/TheBloke/Llama-2-70B-Orca-200k-GGUF)
   <!-- This is a quantized model but it specifically mentions that it does NOT work with llama.cpp which means we can't use it, correct? -->
 <!-- - Quantized: [TheBloke/falcon-40b-instruct-GGML](https://huggingface.co/TheBloke/falcon-40b-instruct-GGML) -->
 
@@ -15,10 +15,10 @@
 ## Quickstart
 
 ```bash
-ansible-playbook model/falcon-40b-instruct/install.yml
+ansible-playbook model/TheBloke/Llama-2-70B-Orca-200k/install.yml
 ```
 
 ```bash
-./model/falcon-40b-instruct/test.sh
+./model/TheBloke/Llama-2-70B-Orca-200k/test.sh
 ```
 
