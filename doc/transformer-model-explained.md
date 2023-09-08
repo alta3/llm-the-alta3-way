@@ -150,6 +150,17 @@ There are a number of ways to prevent overfitting, including:
 * Cross-validation: Cross-validation is a technique that evaluates the model on data that it has not seen before.
 * Early stopping: Early stopping is a technique that stops training the model when it starts to overfit the training data.
 
+# Key Terms
+
+- __Multihead attention__: a technique used in LLMs to allow the model to attend to different parts of the input sequence in different ways. This allows the model to learn more complex relationships between the input and output sequences.
+- Attention Weights: How much focus a word gives to other words in its context.
+- Tokens: Units of text. Depending on the context, a token can be as short as a character or as long as a word.
+- Tokenization: The process of converting a text into tokens, one of the first steps in processing text data.
+- Vector: A numerical representation capturing the meaning of a word or token.
+- Embeddings: Dense vector representations of tokens which capture semantic information about the tokens, meaning that similar words or characters will have similar vector representations.
+- Hidden state: A vector that represents the internal state of a neural network at a given time step.
+- Weighted sum: A mathematical operation that takes a set of hidden states and a set of weights, and returns a single hidden state.
+
 It is important to note that overfitting is not always a bad thing. In some cases, it may be desirable for the model to perform well on the training data, even if it does not generalize well to new data. For example, a model that is used to diagnose diseases may be more accurate if it is trained on a large dataset of patients with known diseases.
 
 However, in general, it is important to avoid overfitting in order to ensure that the model is able to generalize to new data.
