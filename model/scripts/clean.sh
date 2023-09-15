@@ -1,6 +1,6 @@
 #!/bin/bash
-find . -type f -or \
-	-name "*.bin" \
-	-name "*.gguf" \
-	-name "*.gguf-split*" \
+find . -type f \
+	    -name "*.bin" \
+	-or -name "*.gguf" \
+	-or -name "*.gguf-split*" \
 | xargs -I {} -P0 rm -rf {}

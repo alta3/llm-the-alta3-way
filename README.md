@@ -33,20 +33,21 @@
    }
    ```
 
-   Reboot required if cuda-drivers were installed.
-   Run `nvidia-smi` to verify versions.
-
-   ```bash
-   nvidia-smi
-   ```
-
 0. Source `.profile` or `.bashrc` to ensure `~/.local/bin/` is in `$PATH`
 
 0. Select a model and Run (see models section for specific playbooks)
 
    ```bash
    ansible-playbook model/{{ model }}/install.yml
-   ~/llm/model/{{ model }}/test.sh
+   bash ~/llm/model/{{ model }}/test.sh
+   ```
+
+0. System reboot may be required if cuda-drivers were installed.
+
+   Run `nvidia-smi` to verify versions.
+
+   ```bash
+   nvidia-smi
    ```
 
 ## Models
