@@ -4,7 +4,7 @@ export DATA_ALPACA=../../dataset/alpaca
 mkdir -p checkpoint
 
 python3 -m pip install \
-    --pre torch torchvision torchaudio numpy  \
+    --pre 'torch>=2.1.0dev' torchvision torchaudio numpy  \
     --index-url https://download.pytorch.org/whl/nightly/cu118
 
 python3 -m pip install -r ${LIT_GPT}/requirements.txt \

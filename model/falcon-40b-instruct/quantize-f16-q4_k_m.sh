@@ -1,5 +1,8 @@
 # This script expects a f16 base model to quantize
 # Actually perform the quantization
+# change into this script's dir
+cd -P -- "$(dirname -- "$0")"
+
 ../../git/llama.cpp/quantize \
     model/ggml-model-f16.gguf \
     model/falcon-40b-instruct.gguf.q4_k_m.bin \
