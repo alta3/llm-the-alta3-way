@@ -11,7 +11,7 @@
 ## Assumptions
 
 - Ubuntu 20.04 or 22.04 target host
-- Tested with Nvidia H100, A100
+- Tested with Nvidia H100, A100, A40
 
 ## Quickstart
 
