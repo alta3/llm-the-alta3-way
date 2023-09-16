@@ -62,3 +62,5 @@ python finetune/lora.py \
     --data_dir "data/alpaca" \
     --out_dir "out/lora/alpaca"
 ```
+
+Get a coffee... it's going to be awhile.
