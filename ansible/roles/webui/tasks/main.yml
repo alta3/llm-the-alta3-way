@@ -1,0 +1,17 @@
+---
+# roles/webui/tasks/main.yml
+- name: Verify variables
+  debug: 
+    msg:
+     - "webui_dir: {{ webui_dir }}"       # role invocation
+     - "webui_repo: {{ webui_repo }}"     # roles/webui/defaults/main.yml
+     - "webui_branch: {{ webui_branch }}" # roles/webui/defaults/main.yml
+
+- name: Clone text-generation-webui
+  git:
+    repo: "{{ webui_repo }}"   
+    dest: "{{ webui_dir }}"     
+    single_branch: True
+    version: "{{ webui_branch }}"
+    # ignore local changes after first checkout
+    update: False 

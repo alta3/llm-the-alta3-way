@@ -13,3 +13,5 @@
     dest: "{{ lit_dir }}"     
     single_branch: True
     version: "{{ lit_branch }}"
+    # ignore local changes after first checkout
+    update: False 

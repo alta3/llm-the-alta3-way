@@ -27,3 +27,8 @@
     role: lit-gpt
     vars: 
       lit_dir: "{{ llm_git_dir }}/lit-gpt"
+
+  - name: Install webui
+    role: webui
+    vars: 
+      webui_dir: "{{ llm_git_dir }}/webui"

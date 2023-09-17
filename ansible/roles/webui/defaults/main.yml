@@ -1,0 +1,5 @@
+---
+# roles/text-generation-webui/defaults/main.yml
+
+webui_repo: https://github.com/oobabooga/text-generation-webui
+webui_branch: "main"
