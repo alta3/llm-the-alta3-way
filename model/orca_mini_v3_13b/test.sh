@@ -16,3 +16,9 @@ python3 -m pip install numpy
 ../../git/llama.cpp/main -ngl 0 --threads 8 --n-predict 10 \
     --model model/orca_mini_v3_13b.gguf.q8_0.bin \
     --file ../../prompt/instruct/ansible.txt
+
+# Run inference with the converted model `llama.cpp`
+# test with gpu numbers, 43 layers
+../../git/llama.cpp/main -ngl 43 --threads 12 --n-predict 1024 \
+    --model model/orca_mini_v3_13b.gguf.q8_0.bin \
+    --file ../../prompt/instruct/ansible.txt
