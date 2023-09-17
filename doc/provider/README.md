@@ -12,6 +12,23 @@ Searching for GPU's via this [great spreadsheet](https://fullstackdeeplearning.c
 
 Specific setups and scripts for navigating the cloud gpu landscape
 
+### [Paperspace.com](./paperspace/README.md)
+
+- [Provider specific setup](./paperspace/setup.sh)
+- [Home Page](https://www.paperspace.com/)
+- Ubuntu 22.04 image
+- GPUs:
+  - A100 SXM4 80GB
+  - A100 SXM4 40GB
+- Observed Bandwidth: `~500Mbps`
+- Expected download times:
+
+  | model      | size  | download time | 
+  |------------|------+|---------------|
+  | llama 70b  | 188GB | ~50 minutes   |
+  | orca 13b   | 33GB  | ~10 minutes   |
+  | falcon 40b | 78GB  | ~21 minutes   |
+
 ### [DataCrunch.io](./datacrunch/README.md)
 
 - [Provider specific setup](./datacrunch/setup.sh)
