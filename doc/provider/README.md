@@ -1,5 +1,15 @@
 # Providers
 
+Searching for GPU's via this [great spreadsheet](https://fullstackdeeplearning.com/cloud-gpus/).
+
+### Quicklinks
+
+- [shadeform.ai](https://platform.shadeform.ai/)
+- [datacrunch.io](https://cloud.datacrunch.io/dashboard/deploy-server/)
+- [oblivus.com](https://console.oblivus.com/dashboard/oblivuscloud/deploy/)
+- [vultr.com](https://my.vultr.com/deploy/)
+- [paperspace.com](https://console.paperspace.com/bryfry/machines/create)
+
 Specific setups and scripts for navigating the cloud gpu landscape
 
 ### [DataCrunch.io](./datacrunch/README.md)
@@ -18,3 +28,7 @@ Specific setups and scripts for navigating the cloud gpu landscape
   - A100 (40 GB PCIe)
   - A100 (40 GB SXM4)
 
+
+### Oblivus
+
+[Availability Page](https://console.oblivus.com/dashboard/availability/gpu/)

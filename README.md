@@ -33,7 +33,18 @@
    }
    ```
 
-0. Source `.profile` or `.bashrc` to ensure `~/.local/bin/` is in `$PATH`
+0. System is required because cuda-drivers are reinstalled.
+
+   ```bash
+   sudo systemctl reboot
+   ```
+
+0. Run `nvcc --version` and `nvidia-smi` to verify versions.
+
+   ```bash
+   nvcc --version
+   nvidia-smi
+   ```
 
 0. Select a model and Run (see models section for specific playbooks)
 
@@ -42,13 +53,6 @@
    bash ~/llm/model/{{ model }}/test.sh
    ```
 
-0. System reboot may be required if cuda-drivers were installed.
-
-   Run `nvidia-smi` to verify versions.
-
-   ```bash
-   nvidia-smi
-   ```
 
 ## Models
 

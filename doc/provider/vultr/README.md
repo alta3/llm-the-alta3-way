@@ -1,4 +1,4 @@
-# DataCrunch.io
+# vultr.com
 
 ### Setup ssh access
 
@@ -7,13 +7,5 @@
 - Make sudeoers passwordless
 
 ```bash
-ssh {{ ip_or_fqdn }} -l root
-```
-
-```bash
 setup.sh
-```
-
-```bash
-ssh {{ ip_or_fqdn }} -l ubuntu
 ```

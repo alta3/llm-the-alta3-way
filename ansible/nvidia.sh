@@ -3,6 +3,7 @@
 export DEBIAN_FRONTEND=noninteractive 
 export NEEDRESTART_MODE=a
 
+sudo apt update
 sudo apt --purge remove -y "*cublas*" "cuda*" "*nvidia*"
 sudo apt clean -y
 sudo apt autoremove -y
