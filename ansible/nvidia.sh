@@ -11,7 +11,8 @@ sudo rm /etc/apt/sources.list.d/cuda*
 sudo apt-get autoremove && sudo apt-get autoclean
 sudo rm -rf /usr/local/cuda*
 
-sudo -E apt install -y g++ freeglut3-dev build-essential libx11-dev libxmu-dev libxi-dev libglu1-mesa libglu1-mesa-dev
+sudo -E apt install -y g++ build-essential 
+# freeglut3-dev libx11-dev libxmu-dev libxi-dev libglu1-mesa libglu1-mesa-dev
 
 sudo add-apt-repository -y ppa:graphics-drivers/ppa
 sudo apt update
