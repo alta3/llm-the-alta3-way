@@ -14,6 +14,7 @@ bash ansible/nvidia.sh
 
 ## ggml-cuda.cu
 
+Error:
 ```
 Log start                                                                                       
 main: build = 1253 (111163e)                                                                    
