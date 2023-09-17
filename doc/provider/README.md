@@ -20,13 +20,13 @@ Specific setups and scripts for navigating the cloud gpu landscape
 - GPUs:
   - A100 SXM4 80GB
   - A100 SXM4 40GB
-- Observed Bandwidth: `~500Mbps`
+- Observed Bandwidth: `~285Mbps`
 - Expected download times:
   | model      | size  | download time | 
   |------------|------:|---------------|
-  | llama 70b  | 188GB | ~50 minutes   |
-  | orca 13b   | 33GB  | ~10 minutes   |
-  | falcon 40b | 78GB  | ~21 minutes   |
+  | llama 70b  | 188GB | ~1.5 hours    |
+  | orca 13b   | 33GB  | ~15 minutes   |
+  | falcon 40b | 78GB  | ~35 minutes   |
 
 ### [DataCrunch.io](./datacrunch/README.md)
 
