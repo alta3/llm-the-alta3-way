@@ -26,5 +26,5 @@ python3 server.py
 ## Reverse Proxy
 
 ```bash
-sudo ./caddy reverse-proxy --from https://{{ fqdn }} --to 127.0.0.1:7860                       
+sudo caddy reverse-proxy --from https://{{ fqdn }} --to 127.0.0.1:7860                       
 ```
