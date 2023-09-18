@@ -61,7 +61,7 @@
      - input (Tensor) – the input tensor.
      - diagonal (int, optional) – the diagonal to consider
 
-     **Keyword Arguments:**
+     **Optional Keywords:**
 
      - out (Tensor, optional) – the output tensor.
 
@@ -86,23 +86,60 @@
      - tensors (sequence of Tensors) – any python sequence of tensors of the same type. Non-empty tensors provided must have the same shape, except in the cat dimension.
      - dim (int, optional) – the dimension over which the tensors are concatenated
 
-    **Keyword Arguments:**
+    **Optional Keyword:**
    
      - out (Tensor, optional) – the output tensor.
 
+0. ## **torch.multinomial()**  (input, num_samples, replacement=False, *, generator=None, out=None)
+
+     > Returns a tensor where each row contains num_samples indices sampled from the multinomial probability distribution located in the corresponding row of tensor input.
+
+     **Parameters:**
+     
+     - input (Tensor) – the input tensor containing probabilities
+     - num_samples (int) – number of samples to draw
+     - replacement (bool, optional) – whether to draw with replacement or not
+
+     **Optional Keywords:**
+
+     - generator (torch.Generator, optional) – a pseudorandom number generator for sampling
+     - out (Tensor, optional) – the output tensor.
+
+0. ## **nn.Module:** (*args, **kwargs)
+
+    > Base class for all neural network modules.
+    
+    ```
+    import torch.nn as nn
+    import torch.nn.functional as F
+
+    class Model(nn.Module):
+        def __init__(self):
+            super().__init__()
+            self.conv1 = nn.Conv2d(1, 20, 5)
+            self.conv2 = nn.Conv2d(20, 20, 5)
+
+        def forward(self, x):
+            x = F.relu(self.conv1(x))
+            return F.relu(self.conv2(x))
+    ```
+
+0. ## **nn.Linear()**
+
+   > Applies alinear transformation to the incoming data: y = xA^T + b
+   
+   **Parameters:**
+   
+    - in_features (int) – size of each input sample
+    - out_features (int) – size of each output sample
+    - bias (bool) – If set to False, the layer will not learn an additive bias. Default: True
+
+   **Variables** 
+
+    - weight (torch.Tensor): the learnable weights of the module of shape (out_features,in_features). 
+    - bias: the learnable bias of the module of shape (out_features). 
 
 
-
-
-
-
-
-
-torch.arrange
-torch.multinomial
-torch.long
-nn.Module:
-nn.Linear:
 @ or torch.matmul:
 masked_fill:
 F.Softmax:
