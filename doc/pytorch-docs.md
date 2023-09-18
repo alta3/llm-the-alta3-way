@@ -276,3 +276,14 @@
    - Tensor
 
 0. ## **torch.optim**
+
+   > torch.optim is a package implementing various optimization algorithms.
+
+   Construction:
+
+   - To construct an Optimizer you have to give it an iterable containing the parameters (all should be Variable s) to optimize. Then, you can specify optimizer-specific options such as the learning rate, weight decay, etc.
+
+    ```
+    optimizer = optim.SGD(model.parameters(), lr=0.01, momentum=0.9)
+    optimizer = optim.Adam([var1, var2], lr=0.0001)
+    ```
