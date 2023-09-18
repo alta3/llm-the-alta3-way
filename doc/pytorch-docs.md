@@ -180,7 +180,7 @@
 
 
 
-0. ##nn.ModuleList:##
+0. ## **nn.ModuleList:**
 
    > Holds submodules in a list.
 
