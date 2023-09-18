@@ -139,9 +139,27 @@
     - weight (torch.Tensor): the learnable weights of the module of shape (out_features,in_features). 
     - bias: the learnable bias of the module of shape (out_features). 
 
+0. ## **@ or torch.matmul()** (input, other, *, out=None)
 
-@ or torch.matmul:
-masked_fill:
+   > This is an OPERATOR that allows from matrix multiplication
+
+   **Parameters:**
+
+   - input (Tensor) – the first tensor to be multiplied
+   - other (Tensor) – the second tensor to be multiplied
+   
+0. ## **masked_fill_()**  (mask, value)
+
+    > Fills elements of self tensor with value where mask is True. The shape of mask must be broadcastable with the shape of the underlying tensor.
+
+    **Parameters:**
+
+   - mask (BoolTensor) – the boolean mask
+   - value (float) – the value to fill in with
+
+
+
+   
 F.Softmax:
 nn.Dropout
 nn.ModuleList:
