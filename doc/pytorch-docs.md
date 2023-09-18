@@ -157,16 +157,107 @@
    - mask (BoolTensor) – the boolean mask
    - value (float) – the value to fill in with
 
+0. ## **F.Softmax()**
 
+    <img src="https://www.gstatic.com/education/formulas2/553212783/en/softmax_function.svg"/>
+
+    **Returns:**
+    - a Tensor of the same dimension and shape as the input with values in the range [0, 1]
+
+    **Parameters:**
+    - dim (int) – A dimension along which Softmax will be computed (so every slice along dim will sum to 1).
 
    
-F.Softmax:
-nn.Dropout
-nn.ModuleList:
-nn.Sequential
-nn.Embedding
-nn.ReLU
-nn.LayerNorm
+0. ## **nn.Dropout**
+
+    > During training, randomly zeroes some of the elements of the input tensor with probability p using samples from a
+      Bernoulli distribution. Each channel will be zeroed out independently on every forward call.
+    
+    ***Parameters:***
+
+    - p (float) – probability of an element to be zeroed. Default: 0.5
+    - inplace (bool) – If set to True, will do this operation in-place. Default: False
+
+
+
+0. ##nn.ModuleList:##
+
+   > Holds submodules in a list.
+
+   Example:
+
+   ```
+   class MyModule(nn.Module):
+    def __init__(self):
+        super().__init__()
+        self.linears = nn.ModuleList([nn.Linear(10, 10) for i in range(10)])
+
+    def forward(self, x):
+        # ModuleList can act as an iterable, or be indexed using ints
+        for i, l in enumerate(self.linears):
+            x = self.linears[i // 2](x) + l(x)
+        return x
+   ```
+
+0. ## **nn.Sequential()** (Module)
+
+    > A sequential container. Modules will be added to it in the order they are passed in the constructor.
+
+    > NOTE: What’s the difference between a Sequential and a torch.nn.ModuleList? A ModuleList is exactly
+       what it sounds like–a list for storing Module s! On the other hand, the layers in a Sequential are
+       connected in a cascading way.    
+
+
+0. ## **nn.Embedding()** (num_embeddings, embedding_dim, padding_idx=None, max_norm=None, norm_type=2.0, scale_grad_by_freq=False, sparse=False, _weight=None, _freeze=False, device=None, dtype=None)
+
+      > This module is often used to store word embeddings and retrieve them using indices.
+      The input to the module is a list of indices, and the output is the corresponding word embeddings.
+      
+    **Parameters:**
+
+    - num_embeddings (int) – size of the dictionary of embeddings
+    - embedding_dim (int) – the size of each embedding vector
+    - padding_idx (int, optional) – If specified, the entries at padding_idx do not contribute to the gradient
+    - max_norm (float, optional) – If given, each embedding vector with norm larger than max_norm is renormalized to have norm max_norm.
+    - norm_type (float, optional) – The p of the p-norm to compute for the max_norm option. Default 2.
+    - scale_grad_by_freq (bool, optional) – If given, this will scale gradients by the inverse of frequency of the words in the mini-batch. Default False.
+    - sparse (bool, optional) – If True, gradient w.r.t. weight matrix will be a sparse tensor. See Notes for more details regarding sparse gradients.
+      
+    **Variables:**
+   
+    - weight (Tensor) – the learnable weights of the module of shape (num_embeddings, embedding_dim)
+
+0. ## **nn.ReLU** 
+
+    > Applies the rectified linear unit function element-wise:
+
+    ```
+    ReLU(x)=(x)^+ = max(0,x)
+    ```
+
+    **Parameters:**
+
+    - inplace (bool) – can optionally do the operation in-place. Default: False
+
+
+0. ## **nn.LayerNorm**  (normalized_shape, eps=1e-05, elementwise_affine=True, device=None, dtype=None
+
+    > Applies Layer Normalization over a mini-batch of inputs
+
+    <src img="https://miro.medium.com/v2/resize:fit:1040/0*qN-QGSHiY85obQfj" />
+
+    **Parameters:**
+
+   - normalized_shape (int or list or torch.Size) –
+   - input shape from an expected input of size. If a single integer is used, it is treated as a singleton list, and this module will normalize over the last dimension which is expected to be of that specific size.
+   - eps (float) – a value added to the denominator for numerical stability. Default: 1e-5
+   - elementwise_affine (bool) – a boolean value that when set to True, this module has learnable per-element affine parameters initialized to ones (for weights) and zeros (for biases). Default: True.
+
+    **Variables:**
+
+   - weight – the learnable weights of the module of shape 'normalized_shape' when 'elementwise_affine' is set to True. The values are initialized to 1.
+   - bias – the learnable bias of the module of shape 'normalized_shape' when 'elementwise_affine' is set to True. The values are initialized to 0.
+
 F.cross_entropy
 torch.optim.AdamW
 .to(device) / torch.cuda
