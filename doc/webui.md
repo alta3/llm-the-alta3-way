@@ -25,6 +25,16 @@ python3 server.py
 
 ## Reverse Proxy
 
+Install Caddy
+download tarball from github release
+untar binary into user local  bin
+
+
 ```bash
 sudo caddy reverse-proxy --from https://{{ fqdn }} --to 127.0.0.1:7860                       
 ```
+
+
+If error that port is already being listened to:
+sudo lsof -i :80
+
