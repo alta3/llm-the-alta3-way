@@ -63,3 +63,41 @@ SMX device. In order to fix this error, reinstall drivers with a higher version 
 |  No running processes found                                                           |
 +---------------------------------------------------------------------------------------+</code></pre>
 </details>
+
+
+
+
+## ninja in python project does not work under systemd.
+
+Steps to failure:
+ - Install dependencies of a python project in a venv
+ - Setup a system unit file to run the service without 'activate' (this should work)
+ - See ninja blow up:
+
+```
+Sep 19 03:47:23 a100-1 systemd[1]: Started webui.                                                                                                                                                 
+Sep 19 03:47:27 a100-1 python3[239464]: Traceback (most recent call last):                                                    
+<snip>
+Sep 19 03:47:27 a100-1 python3[239464]:   File "/home/ubuntu/llm/git/webui/venv/lib/python3.10/site-packages/exllamav2/ext.py", line 118, in <module>
+Sep 19 03:47:27 a100-1 python3[239464]:     exllamav2_ext = load \                                                                                                                                
+Sep 19 03:47:27 a100-1 python3[239464]:   File "/home/ubuntu/llm/git/webui/venv/lib/python3.10/site-packages/torch/utils/cpp_extension.py", line 1284, in load
+Sep 19 03:47:27 a100-1 python3[239464]:     return _jit_compile(                                                                                                                                  
+Sep 19 03:47:27 a100-1 python3[239464]:   File "/home/ubuntu/llm/git/webui/venv/lib/python3.10/site-packages/torch/utils/cpp_extension.py", line 1509, in _jit_compile
+Sep 19 03:47:27 a100-1 python3[239464]:     _write_ninja_file_and_build_library(                 
+Sep 19 03:47:27 a100-1 python3[239464]:   File "/home/ubuntu/llm/git/webui/venv/lib/python3.10/site-packages/torch/utils/cpp_extension.py", line 1593, in _write_ninja_file_and_build_library
+Sep 19 03:47:27 a100-1 python3[239464]:     verify_ninja_availability()                          
+Sep 19 03:47:27 a100-1 python3[239464]:   File "/home/ubuntu/llm/git/webui/venv/lib/python3.10/site-packages/torch/utils/cpp_extension.py", line 1649, in verify_ninja_availability
+Sep 19 03:47:27 a100-1 python3[239464]:     raise RuntimeError("Ninja is required to load C++ extensions")
+Sep 19 03:47:27 a100-1 python3[239464]: RuntimeError: Ninja is required to load C++ extensions
+```
+
+Fix:
+This is happening because ninja libray is looking for `ninja` to be in the `PATH`.
+Updating `PATH` for the unit file didn't seem to work.
+So... make the unit file source the venv (🤮)
+
+```
+# sourcing venv required due to ninja pkg looking for itself in PATH
+WorkingDirectory=/home/ubuntu/llm/git/webui
+ExecStart=/bin/sh -c '. venv/bin/activate && python3 server.py'
+```
