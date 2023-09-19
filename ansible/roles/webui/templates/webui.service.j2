@@ -6,7 +6,7 @@ After=network.target
 Type=simple
 # sourcing venv required due to ninja pkg looking for itself in PATH
 WorkingDirectory={{ webui_dir }}
-ExecStart=/bin/sh -c '. venv/bin/activate && python3 server.py'
+ExecStart=/bin/sh -c '. venv/bin/activate && python3 server.py --multi-user'
 User={{ ansible_env.USER }}
 Restart=on-exit
 
