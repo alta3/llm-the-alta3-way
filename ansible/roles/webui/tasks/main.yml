@@ -51,5 +51,5 @@
   systemd:
     name: "webui.service"
     daemon_reload: True
-    enable: True
+    enabled: True
     state: "started"
