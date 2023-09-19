@@ -14,6 +14,8 @@
     dest: "{{ langchain_dir }}"     
     single_branch: True
     version: "{{ langchain_branch }}"
+    # ignore local changes after first checkout
+    update: False 
 
 # equivilant to:
 #  - python3 -m venv {{ langchain_dir }}/venv 
@@ -22,8 +24,6 @@
 #  - python3 -m pip install -e .
 - name: Setup langchain venv
   pip:
-    name: .
-    editable: True
     chdir: "{{ langchain_dir }}" 
     virtualenv: "{{ langchain_dir }}/venv"
     virtualenv_command: "python3 -m venv"

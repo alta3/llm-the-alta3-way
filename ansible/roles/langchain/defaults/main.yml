@@ -3,5 +3,6 @@
 langchain_repo: "https://github.com/langchain-ai/langchain"
 langchain_branch: "master"
 langchain_requirements:
+  - "langchain[llms]"
   - "llama-cpp-python"
   - "sentence_transformers"
