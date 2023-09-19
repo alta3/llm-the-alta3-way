@@ -89,7 +89,7 @@ Deployed by this repo's base role, this directory structure is a non-git directo
 ```
 
 
-### Frameworks
+### Model Loaders Frameworks
 
 - [x] [ggerganov/llama.cpp](https://github.com/ggerganov/llama.cpp)
 - [x] [marella/ctransformers](https://github.com/marella/ctransformers)
@@ -121,6 +121,16 @@ Deployed by this repo's base role, this directory structure is a non-git directo
    ```bash
    go help; go version; which go
    ```
+- [oobabooga/text-generation-webui](https://github.com/oobabooga/text-generation-webui)
+   ```bash
+   cd ~/llm/git/webui
+   source venv/bin/activate
+   python3 server.py
+   ```
+
+### Additional dependencies
+
+- [jllllll/llama-cpp-python-cuBLAS-wheels](https://github.com/jllllll/llama-cpp-python-cuBLAS-wheels)
 
 ### Deprecated
 
