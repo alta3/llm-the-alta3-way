@@ -27,3 +27,12 @@
     name: "{{ langchain_requirements }}"
     virtualenv: "{{ langchain_dir }}/venv"
     virtualenv_command: "python3 -m venv"
+
+- name: Setup llama-cpp-python cuBLAS wheel install
+  vars:
+    extra_index_url: "https://jllllll.github.io/llama-cpp-python-cuBLAS-wheels/AVX2/cu117"
+  pip:
+    name: "llama-cpp-python"
+    extra_args: "--prefer-binary --extra-index-url={{ extra_index_url }}"
+    virtualenv: "{{ langchain_dir }}/venv"
+    virtualenv_command: "python3 -m venv"
