@@ -32,3 +32,8 @@
     role: webui
     vars: 
       webui_dir: "{{ llm_git_dir }}/webui"
+
+  - name: Install langchain
+    role: langchain
+    vars: 
+      langchain_dir: "{{ llm_git_dir }}/langchain"

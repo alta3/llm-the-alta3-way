@@ -31,7 +31,7 @@ untar binary into user local  bin
 
 
 ```bash
-sudo caddy reverse-proxy --from https://{{ fqdn }} --to 127.0.0.1:7860                       
+sudo caddy reverse-proxy --from https://{{ fqdn }} --to 127.0.0.1:7860
 ```
 
 

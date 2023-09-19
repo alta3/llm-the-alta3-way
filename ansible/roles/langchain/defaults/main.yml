@@ -1,0 +1,5 @@
+---
+# roles/langchain/defaults/main.yml
+
+langchain_repo: "https://github.com/langchain-ai/langchain"
+langchain_branch: "master"

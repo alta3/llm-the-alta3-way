@@ -1,0 +1,29 @@
+---
+# roles/langchain/tasks/main.yml
+
+- name: Verify variables
+  debug: 
+    msg:
+     - "langchain_dir: {{ langchain_dir }}"       # role invocation
+     - "langchain_repo: {{ langchain_repo }}"     # roles/langchain/defaults/main.yml
+     - "langchain_branch: {{ langchain_branch }}" # roles/langchain/defaults/main.yml
+
+- name: Clone langchain
+  git:
+    repo: "{{ langchain_repo }}"   
+    dest: "{{ langchain_dir }}"     
+    single_branch: True
+    version: "{{ langchain_branch }}"
+
+# equivilant to:
+#  - python3 -m venv {{ langchain_dir }}/venv 
+#  - source {{ langchain_dir }}/venv/bin/activate
+#  - cd {{ langchain_dir }}
+#  - python3 -m pip install -e .
+- name: Setup langchain venv
+  pip:
+    name: .
+    chdir: "{{ langchain_dir }}" 
+    virtualenv: "{{ langchain_dir }}/venv"
+    virtualenv_command: "python3 -m venv"
+    editable: True
