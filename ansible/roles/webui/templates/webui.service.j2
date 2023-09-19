@@ -1,0 +1,15 @@
+[Unit]
+Description=webui
+After=network.target
+
+[Service]
+Type=simple
+# sourcing venv required due to ninja pkg looking for itself in PATH
+WorkingDirectory={{ webui_dir }}
+ExecStart=/bin/sh -c '. venv/bin/activate && python3 server.py'
+User={{ ansible_env.USER }}
+Restart=on-exit
+
+[Install]
+WantedBy=multi-user.target
+
