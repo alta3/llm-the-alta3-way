@@ -33,8 +33,11 @@
   vars:
     extra_index_url: "https://download.pytorch.org/whl/rocm5.4.2" 
   pip:
-    name: "{{ webui_requirements }}"
-    extra_args: "--prefer-binary --extra-index-url={{ extra_index_url }}"
+    name: 
+    - torch
+    - torchvision
+    - torchaudio
+    extra_args: "--extra-index-url={{ extra_index_url }}"
     virtualenv: "{{ langchain_dir }}/venv"
     virtualenv_command: "python3 -m venv"
 
