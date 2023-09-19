@@ -38,7 +38,7 @@
     - torchvision
     - torchaudio
     extra_args: "--extra-index-url={{ extra_index_url }}"
-    virtualenv: "{{ langchain_dir }}/venv"
+    virtualenv: "{{ webui_dir }}/venv"
     virtualenv_command: "python3 -m venv"
 
 - name: Deploy systemd service for webui
