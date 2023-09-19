@@ -24,12 +24,6 @@
 #  - python3 -m pip install -e .
 - name: Setup langchain venv
   pip:
-    chdir: "{{ langchain_dir }}" 
-    virtualenv: "{{ langchain_dir }}/venv"
-    virtualenv_command: "python3 -m venv"
-
-- name: Setup langchain requirements
-  pip:
     name: "{{ langchain_requirements }}"
     virtualenv: "{{ langchain_dir }}/venv"
     virtualenv_command: "python3 -m venv"
