@@ -20,8 +20,7 @@
 # equivilant to:
 #  - python3 -m venv {{ langchain_dir }}/venv 
 #  - source {{ langchain_dir }}/venv/bin/activate
-#  - cd {{ langchain_dir }}
-#  - python3 -m pip install -e .
+#  - python3 -m pip install {{ langchain_requirements }}
 - name: Setup langchain venv
   pip:
     name: "{{ langchain_requirements }}"

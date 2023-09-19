@@ -1,5 +1,11 @@
 ---
 # roles/webui/tasks/main.yml
+
+# Modified version of 
+#  - https://github.com/oobabooga/text-generation-webui#manual-installation-using-conda
+# Changes:
+#  - No conda
+#  - Virtualenv
 - name: Verify variables
   debug: 
     msg:
@@ -7,7 +13,7 @@
      - "webui_repo: {{ webui_repo }}"     # roles/webui/defaults/main.yml
      - "webui_branch: {{ webui_branch }}" # roles/webui/defaults/main.yml
 
-- name: Clone text-generation-webui
+- name: Clone webui
   git:
     repo: "{{ webui_repo }}"   
     dest: "{{ webui_dir }}"     
@@ -15,3 +21,19 @@
     version: "{{ webui_branch }}"
     # ignore local changes after first checkout
     update: False 
+
+- name: Setup webui venv
+  pip:
+    requirements: "requirements.txt"
+    chdir: "{{ webui_dir }}"
+    virtualenv: "{{ webui_dir }}/venv"
+    virtualenv_command: "python3 -m venv"
+
+- name: Setup torch for webui
+  vars:
+    extra_index_url: "https://download.pytorch.org/whl/rocm5.4.2" 
+  pip:
+    name: "{{ webui_requirements }}"
+    extra_args: "--prefer-binary --extra-index-url={{ extra_index_url }}"
+    virtualenv: "{{ langchain_dir }}/venv"
+    virtualenv_command: "python3 -m venv"
