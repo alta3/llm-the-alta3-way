@@ -23,7 +23,13 @@
 - name: Setup langchain venv
   pip:
     name: .
+    editable: True
     chdir: "{{ langchain_dir }}" 
     virtualenv: "{{ langchain_dir }}/venv"
     virtualenv_command: "python3 -m venv"
-    editable: True
+
+- name: Setup langchain requirements
+  pip:
+    name: "{{ langchain_requirements }}"
+    virtualenv: "{{ langchain_dir }}/venv"
+    virtualenv_command: "python3 -m venv"
