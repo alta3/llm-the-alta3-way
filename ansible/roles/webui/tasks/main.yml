@@ -12,6 +12,7 @@
      - "webui_dir: {{ webui_dir }}"       # role invocation
      - "webui_repo: {{ webui_repo }}"     # roles/webui/defaults/main.yml
      - "webui_branch: {{ webui_branch }}" # roles/webui/defaults/main.yml
+     # TODO: Include model simlinks
 
 - name: Clone webui
   git:
