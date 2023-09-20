@@ -85,8 +85,7 @@ m = MiniGPTLanguageModel(vocab_size)
 # calls the model with tensor of inputs and outputs generated in data chunking step
 logits, loss = m(xb, yb)
 
-print(logits.shape)
-print(loss)
+
 
 # IDX is a 1,1 tensor that starts with 0. This is the 'input' or the 'first token' that the generator will use to launch itself. 
 # The 0 index maps to the 'new line character' in our models vocabulary.
