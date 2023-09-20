@@ -1,0 +1,5 @@
+---
+# roles/caddy/tasks/main.yml
+
+caddy_dir: "https://github.com/caddyserver/caddy/releases/download/v2.7.4"
+caddy_file: "caddy_2.7.4_linux_amd64.tar.gz"
