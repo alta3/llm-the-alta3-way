@@ -49,7 +49,7 @@
 0. Select a model and Run (see models section for specific playbooks)
 
    ```bash
-   cd llm-the-alta3-way/
+   cd ~/llm-the-alta3-way/
    ansible-playbook model/{{ model }}/install.yml
    bash ~/llm/model/{{ model }}/test.sh
    ```
