@@ -1,15 +1,15 @@
---- 
+---
 # roles/caddy/tasks/main.yml
 
 - name: Verify variables
-  debug: 
+  debug:
     msg:
-     - "caddy_dir: {{ caddy_dir}}"     # roles/caddy/defaults/main.yml  https://github.com/caddyserver/caddy/releases/download/v2.7.4
-     - "caddy_file: {{ caddy_file }}"   # roles/caddy/defaults/main.yml  caddy_2.7.4_linux_amd64.tar.gz
+      - "caddy_url: {{ caddy_url }}"     # roles/caddy/defaults/main.yml  
+      - "caddy_file: {{ caddy_file }}"   # roles/caddy/defaults/main.yml  
 
 - name: Get Caddy reverse proxy binary
   get_url:
-    url: "{{ caddy_dir }}/{{ caddy_file }}"
+    url: "{{ caddy_url }}/{{ caddy_file }}"
     dest: "/tmp/{{ caddy_file }}"
 
 - name: Untar binary
