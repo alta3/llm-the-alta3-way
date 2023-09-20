@@ -36,7 +36,7 @@
   - name: Install Caddy
     role: caddy
     vars: 
-      caddy_dir: "{{ llm_caddy_dir}}/caddy"
+      caddy_dir: "{{ llm_git_dir}}/caddy"
 
   - name: Install langchain
     role: langchain
