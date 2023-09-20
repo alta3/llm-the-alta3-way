@@ -41,18 +41,23 @@
     virtualenv: "{{ webui_dir }}/venv"
     virtualenv_command: "python3 -m venv"
 
-- name: Create symbolic links
-  hosts: localhost  # You may need to specify the target hosts here
-  tasks:
-    - name: Create symbolic links
-      file:
-        src: "../llm/model/{{ item }}/model/"
-        dest: "~/llm/git/webui/models/"
-        state: link
-      loop:
-        - Llama-2-70B-Orca-200k
-        - falcon-40b-instruct
-        - orca_mini_v3_13b
+- name: Create symbolic link for Llama-2-70B-Orca-200k
+  file:
+    src: "/home/paperspace/llm/model/Llama-2-70B-Orca-200k/model/"
+    dest: "~/llm/git/webui/models/Llama-2-70B-Orca-200k"
+    state: link
+
+- name: Create symbolic link for falcon-40b-instruct
+  file:
+    src: "/home/paperspace/llm/model/falcon-40b-instruct/model/"
+    dest: "~/llm/git/webui/models/falcon-40b-instruct"
+    state: link
+
+- name: Create symbolic link for orca_mini_v3_13b
+  file:
+    src: "/home/paperspace/llm/model/orca_mini_v3_13b/model/"
+    dest: "~/llm/git/webui/models/orca_mini_v3_13b"
+    state: link
 
 - name: Deploy systemd service for webui
   template:
