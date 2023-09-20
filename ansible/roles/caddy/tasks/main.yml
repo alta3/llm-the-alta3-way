@@ -1,0 +1,26 @@
+--- 
+# roles/caddy/tasks/main.yml
+
+- name: Verify variables
+  debug: 
+    msg:
+     - "caddy_dir: {{ caddy_dir}}"     # roles/caddy/defaults/main.yml  https://github.com/caddyserver/caddy/releases/download/v2.7.4
+     - "caddy_file: {{ caddy_file }}"   # roles/caddy/defaults/main.yml  caddy_2.7.4_linux_amd64.tar.gz
+
+- name: Download Caddy
+  get_url:
+    url: "{{ caddy_dir }}/{{ caddy_file }}"
+    dest: "/tmp/{{ caddy_file }}"
+
+- name: Untar Caddy
+  unarchive:
+    src: "/tmp/{{ caddy_file }}"
+    dest: "/usr/local/bin"
+    remote_src: yes
+  become: yes
+
+- name: Set permissions for Caddy
+  file:
+    path: "/usr/local/bin/caddy"
+    mode: "0755"
+  become: yes
