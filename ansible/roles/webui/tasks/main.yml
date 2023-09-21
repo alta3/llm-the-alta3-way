@@ -44,20 +44,20 @@
 
 - name: Create symbolic link for Llama-2-70B-Orca-200k
   file:
-    src: "/home/paperspace/llm/model/Llama-2-70B-Orca-200k/model/"
-    dest: "~/llm/git/webui/models/Llama-2-70B-Orca-200k"
+    src: "{{ llm_model_dir }}/Llama-2-70B-Orca-200k/model/"
+    dest: "{{ llm_git_dir }}/webui/models/Llama-2-70B-Orca-200k"
     state: link
 
 - name: Create symbolic link for falcon-40b-instruct
   file:
-    src: "/home/paperspace/llm/model/falcon-40b-instruct/model/"
-    dest: "~/llm/git/webui/models/falcon-40b-instruct"
+    src: "{{ llm_model_dir }}/falcon-40b-instruct/model/"
+    dest: "{{ llm_git_dir }}/webui/models/falcon-40b-instruct"
     state: link
 
 - name: Create symbolic link for orca_mini_v3_13b
   file:
-    src: "/home/paperspace/llm/model/orca_mini_v3_13b/model/"
-    dest: "~/llm/git/webui/models/orca_mini_v3_13b"
+    src: "{{ llm_model_dir }}/orca_mini_v3_13b/model/"
+    dest: "{{ llm_git_dir }}/webui/models/orca_mini_v3_13b"
     state: link
 
 - name: Deploy systemd service for webui
