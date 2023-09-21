@@ -54,10 +54,12 @@
    bash ~/llm/model/{{ model }}/test.sh
    ```
 
-0. Want to try again?  This directory structure is created to make that action really easy. Perform the following to reset your machine:
+0. Want to try again?  This directory structure is created to make that action really easy. rm the following directories to reset your machine:
 
-  rm -r ~/llm
-  rm -r ~/llm-the-alta3-way
+    ```
+    rm -r ~/llm
+    rm -r ~/llm-the-alta3-way
+    ```
 
 ## Models
 
