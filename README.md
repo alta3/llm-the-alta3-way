@@ -15,7 +15,7 @@
 
 ## Quickstart
 
-1. Every cloud service PROVIDER requires specific configuration in order to complete this quickstart. As soon as you have connected to the provider's host, [find your CLOUD PROVIDER on this list](doc/provider/README.md), read the README found there and run the tasks specified in that README. If you skip this step, things will NOT work.
+1. Every cloud service PROVIDER requires specific configuration in order to complete this quickstart. As soon as you have connected to the provider's host, [find your CLOUD PROVIDER on this list](doc/provider/README.md), read the README found there and run the tasks specified in that README. Skip this step at your peril.
 
 0. Exit the provider's machine.
 
