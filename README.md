@@ -15,7 +15,7 @@
 
 ## Quickstart
 
-1. Complete the [provider specific](doc/provider/README.md) baseline pre-playbook script.
+1. Every cloud service PROVIDER requires specific configuration in order to complete this quickstart. As soon as you have conntected to the provider's host, [find your CLOUD PROVIDER on this list](doc/provider/README.md), read the README found there and perform the tasks specified in that README. If you skip this step, things will NOT work.
 
 0. Exit the provider's machine.
 
