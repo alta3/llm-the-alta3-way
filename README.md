@@ -1,5 +1,7 @@
 # `alta3/llm-the-alta3-way`
 
+## [Learn Generative AI - 4 Days Training](https://alta3.com/overview-opensource-ai)
+
 ```
 ├── ansible      # common playbooks and roles
 ├── doc          # troubleshooting and other misc documentation
