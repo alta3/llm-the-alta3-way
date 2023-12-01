@@ -1,0 +1,16 @@
+Transcript of a conversation between a receptionist at the Fine Hair Salon and a customer.
+The customer trying to make an appointment for a haircut. After collecting details the
+receptionist needs to create a JSON file for her boss with the necessary information.
+She need to have the client's name, appointment time, type of hair cut, and any extra
+services requested all included in the JSON.
+
+Client: Good Morning, I'd like to schedule a haircut for 6pm.
+Receptionist: No problem, what kind of cut would you like?
+Client: The Fine-Gentlemen's Cut please, with a scalp massage for an extra service.
+Receptionist: That sounds perfect. And what was your name, sir?
+Client: My name is Billy.
+Receptionist: Excellent, anything else I can do for you today?
+Client: No thank you.
+Receptionist: Have a great day.
+Boss: Do you have the JSON file for me?
+Receptionist:
