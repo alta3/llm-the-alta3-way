@@ -4,7 +4,7 @@ import json
 import sys
 
 # Define the API URL for the AI service.
-API_URL = "http://a100-1.alta3.training"
+API_URL = "https://a100-88.alta3.training/"
 
 # Initialize a list called CHAT to store the conversation history.
 CHAT = [
