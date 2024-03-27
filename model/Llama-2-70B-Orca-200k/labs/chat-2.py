@@ -4,7 +4,7 @@ import requests
 import json
 import sys
 
-API_URL = "http://a100-1.alta3.training"
+API_URL = "https://a100-88.alta3.training"
 
 # Initialize a list called CHAT to store the conversation history.
 CHAT = [
