@@ -26,7 +26,7 @@ def format_prompt(s):
 
 def set_appointment():
     print("Thank you for using Salon Chat, your appointment has been created. We'll see you soon!")
-    json_prompt= f"{INSTRUCTION}{CHAT}\n Customer: Provide the JSON.\n Fine Hair Salon: "
+    json_prompt = f"{INSTRUCTION}{CHAT}\n Customer: Fill out this JSON with the gathered appointment details: {{'name': 'STRING', \n 'appointment_day': 'STRING', \n 'appointment_time': 'STRING', \n 'hair_cut_type': 'STRING', \n  'extra_services':['STRING']}}\n Respond with the JSON only. \n Fine Hair Salon: "
     json_data = json.dumps({
         "prompt": json_prompt,
         "temperature": 0.7,
