@@ -10,7 +10,7 @@ API_URL = "https://a100-1.alta3.training"
 CHAT = [
 ]
 
-with open('/home/student/mycode/receptionist/receptionist-json.txt', 'r') as file:
+with open('/home/student/mycode/receptionist/receptionist-json.json', 'r') as file:
     character_context = file.read()
 
 INSTRUCTION = character_context
@@ -29,7 +29,7 @@ def set_appointment():
     json_prompt= f"{INSTRUCTION}{CHAT}\n Customer: Provide the JSON.\n Fine Hair Salon: "
     json_data = json.dumps({
         "prompt": json_prompt,
-        "temperature": 0.7,
+        "temperature": 0.6,
         # "top_k": 40,
         "top_p": 0.9,
         "mirostat": 2,
@@ -44,6 +44,7 @@ def set_appointment():
         data=json_data,
         stream=True
         )
+
     json_content = ""
     for line in json_response.iter_lines(decode_unicode=True):
         if line.startswith("data: "):
@@ -67,7 +68,7 @@ def chat_completion(question):
     prompt = trim_trailing(format_prompt(question))
     data = json.dumps({
         "prompt": prompt,
-        "temperature": 0.7,
+        "temperature": 0.6,
         # "top_k": 40,
         "top_p": 0.9,
         "mirostat": 2,
