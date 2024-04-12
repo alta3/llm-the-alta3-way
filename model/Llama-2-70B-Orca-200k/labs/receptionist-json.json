@@ -90,7 +90,7 @@
       "Fine Hair Salon": "Welcome to Salon Chat. May I have your name?",
       "Customer": "What Services do you offer?",
       "Response": "Service Name,Price,Description\nClassic Cut,$60,A timeless and elegant haircut that suits any occasion.\nFashionista's Choice,$120,Stay on the cutting edge of style with this trendy and high-fashion haircut.\nGentleman's Trim,$45,A precise and tailored cut for the modern gentleman.\nLong Locks Trim,$75,Keep your long hair healthy and stylish with a professional trim.\nKids' Cut,$35,Fun and comfortable haircuts for our younger clients.\nHead Massage,$20,Add a head massage to any cut.\nHair Wash,$10,Add a hair wash before any cut.\nHair Styling Consultation,$35,Get a hair styling consultation."
-    }
+    },
     {
       "Fine Hair Salon": "Welcome to Salon Chat. May I have your name?",
       "Customer": "When are you open?",
