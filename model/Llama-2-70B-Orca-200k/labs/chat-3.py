@@ -5,12 +5,12 @@ import requests
 import json
 import sys
 
-API_URL = "https://a100-88.alta3.training"
+API_URL = "https://a100-1.alta3.training"
 
 CHAT = [
 ]
 
-with open('receptionist-json.txt', 'r') as file:
+with open('/home/student/mycode/receptionist/receptionist-json.txt', 'r') as file:
     character_context = file.read()
 
 INSTRUCTION = character_context
