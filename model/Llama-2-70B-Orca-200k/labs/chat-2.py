@@ -11,7 +11,7 @@ CHAT = [
 ]
 
 # Define the initial instruction for the conversation.
-with open('/home/student/receptionist/receptionist-beta.txt', 'r') as file:
+with open('/home/student/mycode/receptionist/receptionist-beta.txt', 'r') as file:
     character_context = file.read()
 
 INSTRUCTION = character_context
