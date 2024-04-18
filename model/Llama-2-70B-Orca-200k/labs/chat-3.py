@@ -10,7 +10,7 @@ API_URL = "https://a100-1.alta3.training"
 CHAT = [
 ]
 
-with open('/home/student/mycode/receptionist/receptionist-json.json', 'r') as file:
+with open('/home/student/mycode/receptionist/receptionist-json.txt', 'r') as file:
     character_context = file.read()
 
 INSTRUCTION = character_context
