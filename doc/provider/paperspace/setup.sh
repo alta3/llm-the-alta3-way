@@ -1,6 +1,6 @@
 Acces the machine with 
 `ssh paperspace@a100-1.alta3.training`
-Assuming the routing in AWS hasn't changed. 
+Assuming the routing in AWS hasnt changed. 
 
 {
   sudo sed -i 's/#PermitRootLogin prohibit-password/PermitRootLogin no/g' /etc/ssh/sshd_config
