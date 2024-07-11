@@ -35,7 +35,7 @@
    }
    ```
 
-0. System is required because cuda-drivers are reinstalled.
+0. System reboot is required because cuda-drivers are reinstalled.
 
    ```bash
    sudo systemctl reboot
