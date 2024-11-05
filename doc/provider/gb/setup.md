@@ -54,3 +54,19 @@ Acces the machine with a custom [ssh_config.rw](https://github.com/alta3/infrast
     |  No running processes found                                                           |
     +---------------------------------------------------------------------------------------+
     ```
+
+0. Install the Cuda Compiler software.
+
+    `sudo apt install nvidia-cuda-toolkit`
+
+0. Run the Nvidia Cuda Compiler command.
+
+    `nvcc -V`
+
+    ```
+    nvcc: NVIDIA (R) Cuda compiler driver
+    Copyright (c) 2005-2023 NVIDIA Corporation
+    Built on Fri_Jan__6_16:45:21_PST_2023
+    Cuda compilation tools, release 12.0, V12.0.140
+    Build cuda_12.0.r12.0/compiler.32267302_0
+    ```
