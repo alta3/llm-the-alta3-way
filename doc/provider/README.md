@@ -4,6 +4,7 @@ Searching for GPU's via this [great spreadsheet](https://fullstackdeeplearning.c
 
 ### Quicklinks
 
+- [gb](./gb) 
 - [shadeform.ai](https://platform.shadeform.ai/)
 - [datacrunch.io](https://cloud.datacrunch.io/dashboard/deploy-server/)
 - [oblivus.com](https://console.oblivus.com/dashboard/oblivuscloud/deploy/)
@@ -13,7 +14,7 @@ Searching for GPU's via this [great spreadsheet](https://fullstackdeeplearning.c
 Specific setups and scripts for navigating the cloud gpu landscape
 
 ### [Gigabyte](./gb/README.md)
-- [Provider specific setup](./gb/setup.sh)
+- [Provider specific setup](./gb/setup.md)
 - [Home Page](https:///)
 - Ubuntu 24.04 image
 - GPUs:
