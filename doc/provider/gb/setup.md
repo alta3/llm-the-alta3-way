@@ -70,3 +70,64 @@ Acces the machine with a custom [ssh_config.rw](https://github.com/alta3/infrast
     Cuda compilation tools, release 12.0, V12.0.140
     Build cuda_12.0.r12.0/compiler.32267302_0
     ```
+
+
+
+
+
+0. Setup ansible and clone this repo
+
+   ```bash
+   {
+     git clone https://github.com/alta3/llm-the-alta3-way.git
+     cd llm-the-alta3-way
+     bash ansible/nvidia.sh
+     python3 -m pip install --upgrade --user pip
+     python3 -m pip install --user ansible
+   }
+   ```
+
+    > This will take approx. 30 Minutes to complete.
+    >
+    > **IMPORTANT** -- As of 4/11 -- An issue with the Paperspace VM was noted to case an error which impacts the **APT** Package Manager. Exact steps to correct were not recorded, however your instructor will know what to do. If/When you encounter this issue, please inform your instructor.
+
+0. System reboot is required because cuda-drivers are reinstalled.
+
+   ```bash
+   sudo systemctl reboot
+   ```
+
+    > It may take a few minutes to restart the VM. If your SSH connection fails, try again after a few minutes.
+
+0. Run `nvcc --version` and `nvidia-smi` to verify versions.
+
+   ```bash
+   nvcc --version
+   nvidia-smi
+   ```
+
+0. Select a model and Run (see models section for specific playbooks)
+
+   ```bash
+   cd ~/llm-the-alta3-way/
+   ansible-playbook model/{{ model }}/install.yml
+   bash ~/llm/model/{{ model }}/test.sh
+   ```
+
+    > It will take approx. 1.5 hours for this playbook to complete. The reason for this is needing to download the model to the Paperspace VM which takes quite a while. It may appear the Ansible Playbook has stalled, but I assure you -- It has not.
+
+0. Use TMUX and split your screen into 3 panes
+
+    To perform a Vertical Split -- **CTRL+B** - **HOK** - **%**
+    To perform a Horizontal Split -- **CTRL+B** - **HOK** - **"**
+
+    > - TMUX PANE #1 - A Panel reserved for running LLAMA-2 in Server Mode.
+    > - TMUX PANE #2 - A Panel reserved for running Caddy in Reverse Proxy Mode
+    > - TMUX PANE #3 - Command Line operations
+
+0. Want to try again?  This directory structure is created to make that action really easy. rm the following directories to reset your machine:
+
+    ```
+    rm -r ~/llm
+    rm -r ~/llm-the-alta3-way
+    ```
