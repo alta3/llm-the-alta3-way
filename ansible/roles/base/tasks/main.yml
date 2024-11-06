@@ -13,9 +13,17 @@
     name: "{{ default_apt_list }}" # roles/base/defaults/main.yml
   become: True
 
-- name: Ensure base pip packages are installed
+    #- name: Create a virtual environment
+    #  command:
+    #    cmd: python3 -m venv /home/ubuntu/llm-the-alta3-way/venv
+    #  args:
+    #    creates: /home/ubuntu/llm-the-alta3-way/venv
+
+- name: Ensure base pip packages are installed in the virtual environment
   pip:
-    name: "{{ default_pip_list }}" # roles/base/defaults/main.yml
+    name: "{{ default_pip_list }}"
+    virtualenv: /home/ubuntu/llm-the-alta3-way/venv
+    virtualenv_python: python3
 
 - name: Create llm directory structure
   file: 
