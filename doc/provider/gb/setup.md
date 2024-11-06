@@ -1,6 +1,7 @@
 Acces the machine with a custom [ssh_config.rw](https://github.com/alta3/infrastructure/blob/main/charlie/ssh_config.rw).
 
 - OS: 24.04
+- llm-the-alta3-way -> `gb` branch
 
 
 
@@ -72,16 +73,12 @@ Acces the machine with a custom [ssh_config.rw](https://github.com/alta3/infrast
     ```
 
 
-
-
-
 0. Setup ansible and clone this repo
 
    ```bash
    {
      git clone https://github.com/alta3/llm-the-alta3-way.git
      cd llm-the-alta3-way
-    
    }
    ```
 
@@ -118,6 +115,24 @@ Acces the machine with a custom [ssh_config.rw](https://github.com/alta3/infrast
 
     > It may take a few minutes to restart the VM. If your SSH connection fails, try again after a few minutes.
 
+0. Helpful commands to find out what hardware you are using to make sure you install the right drivers.
+
+    ```bash
+    cat /proc/driver/nvidia/version
+    sudo ubuntu-drivers list --gpgpu
+    sudo lshw -C display
+    lspci -vnn | grep VGA
+    ```
+
+0. install drivers for the card.
+
+    ```bash
+    sudo apt update
+    sudo ubuntu-drivers install --gpgpu
+    sudo apt update
+    sudo apt install -y nvidia-driver-535
+    ```
+
 0. Run `nvcc --version` and `nvidia-smi` to verify versions.
 
    ```bash
@@ -130,6 +145,13 @@ Acces the machine with a custom [ssh_config.rw](https://github.com/alta3/infrast
    ```bash
    cd ~/llm-the-alta3-way/
    ansible-playbook model/{{ model }}/install.yml
+   ```
+
+0. Update the test script. Since we are using Llama for this example, replace *main* with **llama-cli**. Other models see [binary name changes](https://github.com/ggerganov/llama.cpp/blob/master/examples/deprecation-warning/README.md)
+
+0. Run the test.
+
+   ```bash
    bash ~/llm/model/{{ model }}/test.sh
    ```
 
