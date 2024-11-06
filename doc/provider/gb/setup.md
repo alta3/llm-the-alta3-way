@@ -147,6 +147,8 @@ Acces the machine with a custom [ssh_config.rw](https://github.com/alta3/infrast
    ansible-playbook model/{{ model }}/install.yml
    ```
 
+    > It will take approx. 1 hour and 7 minutes for this playbook to complete. The reason for this is needing to download the model to the Paperspace VM which takes quite a while. It may appear the Ansible Playbook has stalled, but I assure you -- It has not.
+
 0. Update the test script. Since we are using Llama for this example, replace *main* with **llama-cli**. Other models see [binary name changes](https://github.com/ggerganov/llama.cpp/blob/master/examples/deprecation-warning/README.md)
 
 0. Run the test.
@@ -154,8 +156,6 @@ Acces the machine with a custom [ssh_config.rw](https://github.com/alta3/infrast
    ```bash
    bash ~/llm/model/{{ model }}/test.sh
    ```
-
-    > It will take approx. 1 hour and 7 minutes for this playbook to complete. The reason for this is needing to download the model to the Paperspace VM which takes quite a while. It may appear the Ansible Playbook has stalled, but I assure you -- It has not.
 
 0. Use TMUX and split your screen into 3 panes
 
