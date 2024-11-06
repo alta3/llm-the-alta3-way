@@ -133,7 +133,7 @@ Acces the machine with a custom [ssh_config.rw](https://github.com/alta3/infrast
    bash ~/llm/model/{{ model }}/test.sh
    ```
 
-    > It will take approx. 1.5 hours for this playbook to complete. The reason for this is needing to download the model to the Paperspace VM which takes quite a while. It may appear the Ansible Playbook has stalled, but I assure you -- It has not.
+    > It will take approx. 1 hour and 7 minutes for this playbook to complete. The reason for this is needing to download the model to the Paperspace VM which takes quite a while. It may appear the Ansible Playbook has stalled, but I assure you -- It has not.
 
 0. Use TMUX and split your screen into 3 panes
 
