@@ -20,7 +20,7 @@
 
 - name: Build llama.cpp
   shell: 
-    cmd: "make"
+    cmd: "cmake"
     chdir: "{{ llama_dir }}" 
     creates: "{{ llama_dir }}/main"
   environment:
